@@ -1,0 +1,231 @@
+<div class="linearGradient" id="linearGradient"></div>
+<div class="ultraWide">
+  <section id="contact_component">
+    <h1
+      class="greeting fontSyne disableTextSelection"
+      [appHighlighting]="isHighlighted"
+    >
+      Say Hi!
+    </h1>
+
+    <div class="formParent">
+      <div class="greetings">
+        <h2 class="fontOverpass disableTextSelection">
+          Want to discuss a new project?
+        </h2>
+        <h3 class="fontOverpass disableTextSelection">
+          Say hello! let's discuss your ideas and make it happen
+        </h3>
+      </div>
+
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <!-- -------------------------------------------------------------------- -->
+
+        <div
+          class="inputWrapper inputWrapper_name"
+          [ngClass]="{
+            inputWrapper_focusName: isFocusedName || contactData.name
+          }"
+        >
+          <label
+            class="inputLabel_name fontOverpass disableTextSelection"
+            for="input_name"
+            >Your name</label
+          >
+
+          <input
+            class="input_name fontOverpass disableTextSelection"
+            id="input_name"
+            type="text"
+            (focus)="onFocus('name', true)"
+            (blur)="onFocus('name', false)"
+            placeholder=""
+            required
+            autocomplete="off"
+            pattern="^[a-zA-Z]+ [a-zA-Z]+$"
+            [(ngModel)]="contactData.name"
+            #name="ngModel"
+            name="name"
+            [ngClass]="{
+      'borderValid': name.valid && name.touched,
+      'borderInvalid': name.invalid && name.touched,
+    }"
+          />
+
+          <div class="validateIconsWrapper">
+            @if (name.valid && name.touched) {
+            <span class="validIcon"></span>} @if (name.invalid && name.touched)
+            { <span class="errorIcon"></span>}
+          </div>
+
+          @if (name.invalid && name.touched) {
+          <!-- @if(name.errors.required) {
+        <span class="errorText">Your name is required. </span>
+        } @if(name.errors.pattern) {
+        <span class="errorText">Please enter your full name. </span
+        >} -->
+
+          <small
+            class="errorText fontOverpass disableTextSelection"
+            *ngIf="name.errors?.['required']"
+          >
+            Your name is required.
+          </small>
+
+          <small
+            class="errorText fontOverpass disableTextSelection"
+            *ngIf="name.errors?.['pattern']"
+          >
+            Please enter your full name.
+          </small>
+          }
+        </div>
+
+        <!-- -------------------------------------------------------------------- -->
+
+        <div
+          class="inputWrapper inputWrapper_email"
+          [ngClass]="{
+            inputWrapper_focusEmail: isFocusedEmail || contactData.email
+          }"
+        >
+          <label
+            class="inputLabel_email fontOverpass disableTextSelection"
+            for="input_email"
+            >Your email</label
+          >
+          <input
+            class="input_email fontOverpass disableTextSelection"
+            id="input_email"
+            type="text"
+            (focus)="onFocus('email', true)"
+            (blur)="onFocus('email', false)"
+            placeholder=""
+            required
+            autocomplete="off"
+            [(ngModel)]="contactData.email"
+            #email="ngModel"
+            name="email"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            [ngClass]="{
+          'borderValid': email.valid && email.touched,
+          'borderInvalid': email.invalid && email.touched,
+        }"
+          />
+
+          <div class="validateIconsWrapper">
+            @if (email.valid && email.touched) {
+            <span class="validIcon"></span>} @if (email.invalid &&
+            email.touched) { <span class="errorIcon"></span>}
+          </div>
+
+          @if (email.invalid && email.touched) {
+          <small
+            class="errorText fontOverpass disableTextSelection"
+            *ngIf="email.errors?.['required']"
+          >
+            Your email is required.
+          </small>
+
+          <small
+            class="errorText fontOverpass disableTextSelection"
+            *ngIf="email.errors?.['pattern']"
+          >
+            Please enter a valid email address.
+          </small>
+
+          }
+        </div>
+
+        <!-- -------------------------------------------------------------------- -->
+
+        <div
+          class="textareaWrapper textareaWrapper_message"
+          [ngClass]="{
+            inputWrapper_focusMessage: isFocusedMessage || contactData.message
+          }"
+        >
+          <label
+            class="inputLabel_message fontOverpass disableTextSelection"
+            for="textarea_message"
+            >Your message</label
+          >
+          <textarea
+            class="textarea_message textarea fontOverpass disableTextSelection"
+            id="textarea_message"
+            type="text"
+            (focus)="onFocus('message', true)"
+            (blur)="onFocus('message', false)"
+            placeholder=""
+            required
+            [(ngModel)]="contactData.message"
+            name="message"
+            #message="ngModel"
+            [ngClass]="{
+          'borderValid': message.valid && message.touched,
+          'borderInvalid': message.invalid && message.touched,
+        }"
+          >
+          </textarea>
+
+          <div class="validateIconsWrapper">
+            @if (message.valid && message.touched) {
+            <span class="validIcon"></span>} @if (message.invalid &&
+            message.touched) { <span class="errorIcon"></span>}
+          </div>
+
+          @if (message.invalid && message.touched) {
+          <small class="errorText fontOverpass disableTextSelection">
+            Your message is empty. </small
+          >}
+        </div>
+
+        <!-- -------------------------------------------------------------------- -->
+
+        <div class="checkboxWrapper_checkbox">
+          <div class="chechbox_main">
+            <input
+              class="checkboxSelf"
+              id="checkboxSelf"
+              type="checkbox"
+              placeholder=""
+              [(ngModel)]="isChecked"
+              name="checkbox"
+              #checkbox="ngModel"
+            />
+
+            <label
+              class="checkboxLabel fontOverpass disableTextSelection"
+              for="checkboxSelf"
+              ><small
+                >I've read the
+                <a class="checkboxPolicy" href="#">privacy policy</a> and agree
+                to the processing of my data as outlined.</small
+              ></label
+            >
+          </div>
+
+          @if (!isChecked && checkbox.touched) {
+          <small class="errorText fontOverpass disableTextSelection"
+            >Please accept the privacy policy.</small
+          >
+          }
+        </div>
+
+        <!-- -------------------------------------------------------------------- -->
+
+        <app-call-action-button
+          [buttonClass]="'contactButton'"
+          [buttonTextRowOne]="'Send message'"
+          [buttonType]="'submit'"
+          [disabled]="!contactForm.valid || !isChecked"
+        >
+        </app-call-action-button>
+      </form>
+    </div>
+
+    <div class="homeArraw_Section">
+      <a href="#landingPage_firstSector"> <div class="homeArrow"></div></a>
+    </div>
+  </section>
+</div>

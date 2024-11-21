@@ -1,0 +1,35 @@
+.ultraWide {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // background-color: rgb(101, 179, 153);
+  background-color: var(--primeColor-background);
+}
+
+section {
+  width: 100%;
+  max-width: 1440px;
+  height: calc(100vh - 7vh);
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-areas:
+    " . firstSector . "
+    " . secondSector . "
+    " . thirdSector . ";
+}
+
+.firstSector {
+  grid-area: firstSector;
+}
+
+.secondSector {
+  grid-area: secondSector;
+}
+
+.thirdSector {
+  grid-area: thirdSector;
+}
