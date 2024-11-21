@@ -8,11 +8,10 @@
 @media screen and (max-width: 720px) and (orientation: portrait) {
   section {
     margin-top: 4rem;
-    padding: 5vh 0 0 0;
     width: 100%;
     max-width: 1440px;
     display: grid;
-    grid-template-columns: 1fr 80% 1fr;
+    grid-template-columns: 1fr 90% 1fr;
     grid-template-rows: min-content min-content;
     grid-column-gap: 0px;
     grid-row-gap: 0rem;
@@ -39,7 +38,7 @@
 
     h1 {
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-      font-size: clamp(26px, 2vw + 1rem, 80px);
+      font-size: clamp(26px, 2.5vw + 1.5rem, 80px);
       font-weight: 800;
       letter-spacing: -0.07rem;
       color: black;
@@ -61,7 +60,7 @@
     img {
       box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
       background-color: rgb(100, 171, 100);
-      width: clamp(130px, 20% + 4rem, 300px);
+      width: clamp(130px, 25% + 4rem, 300px);
       border-radius: 10px;
     }
   }
@@ -76,6 +75,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 2rem;
 
     .arrowLeft {
       background-image: url("./../../../../public/assets/vector/arrowLeft.svg");
@@ -89,7 +89,7 @@
 
 @media screen and (max-width: 720px) and (orientation: landscape) {
   section {
-    margin-top: 4rem;
+    // margin-top: 4rem;
     padding: 5vh 0 0 0;
     width: 100%;
     max-width: 1440px;
@@ -143,7 +143,7 @@
     img {
       box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
       background-color: rgb(100, 171, 100);
-      width: clamp(120px, 13% + 4rem, 300px);
+      width: clamp(120px, 20% + 4rem, 300px);
       border-radius: 10px;
       align-self: flex-end;
     }
@@ -172,8 +172,7 @@
 
 @media screen and (min-width: 720px) and (max-width: 1024px) and (orientation: portrait) {
   section {
-    margin-top: 4rem;
-    padding: 5vh 0 0 0;
+    padding-top: 5vh;
     width: 100%;
     max-width: 1440px;
     display: grid;
@@ -210,7 +209,7 @@
       color: black;
       text-align: center;
       white-space: nowrap;
-      padding: 2.2rem 0;
+      padding: 2rem 0;
     }
 
     p {
@@ -226,7 +225,7 @@
     img {
       box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
       background-color: rgb(100, 171, 100);
-      width: clamp(130px, 20% + 4rem, 300px);
+      width: clamp(130px, 30% + 4rem, 300px);
       border-radius: 10px;
     }
   }
@@ -241,6 +240,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 2rem;
 
     .arrowLeft {
       background-image: url("./../../../../public/assets/vector/arrowLeft.svg");
@@ -293,7 +293,7 @@
       color: black;
       text-align: center;
       white-space: nowrap;
-      padding: 1rem 0 2.2rem 0;
+      padding: 2rem 0;
     }
 
     p {
@@ -309,7 +309,7 @@
     img {
       box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
       background-color: rgb(100, 171, 100);
-      width: clamp(120px, 13% + 4rem, 300px);
+      width: clamp(120px, 20% + 4rem, 300px);
       border-radius: 10px;
       align-self: flex-end;
     }
@@ -356,7 +356,7 @@
     justify-self: center;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     width: 100%;
     gap: 2rem;
@@ -375,7 +375,7 @@
       color: black;
       text-align: center;
       white-space: nowrap;
-      padding: 3rem 0 3rem 0;
+      padding: 3rem 0;
     }
 
     p {
@@ -391,7 +391,7 @@
     img {
       box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
       background-color: rgb(100, 171, 100);
-      width: clamp(130px, 20% + 4rem, 300px);
+      width: clamp(130px, 20% + 4rem, 200px);
       border-radius: 10px;
       max-width: 100%;
       object-fit: cover;
@@ -426,7 +426,7 @@
   .secondSector {
     grid-area: secondSector;
     width: 100%;
-    padding-top: 4rem;
+    padding: 4rem;
     justify-self: center;
     display: flex;
     align-items: center;

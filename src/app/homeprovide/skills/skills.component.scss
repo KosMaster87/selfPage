@@ -1,6 +1,6 @@
 @media screen and (max-width: 720px) and (orientation: portrait) {
   section {
-    margin: 5vh 0 0 0;
+    // margin-top: 2.5vh;
     width: 100%;
     max-width: 1440px;
     display: grid;
@@ -44,14 +44,15 @@
 
     h1 {
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-      font-size: clamp(1rem, 7vw, 4rem);
+      font-size: clamp(1.3rem, 8vw + 0.45rem, 4rem);
+      // font-size: clamp(1rem, 7vw, 4rem);
       font-weight: 800;
       letter-spacing: -0.07rem;
       text-align: center;
       white-space: nowrap;
       background-color: rgb(230, 228, 227);
       border-radius: 5px;
-      padding: 10px 20px 10px 20px;
+      padding: 0 0.8rem;
       position: absolute;
       top: 0;
       left: 50%;
@@ -88,6 +89,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 2rem;
 
     .arrowRight {
       background-image: url("./../../../../public/assets/vector/arrowRight.svg");
@@ -212,7 +214,7 @@
 
 @media screen and (min-width: 720px) and (max-width: 1024px) and (orientation: portrait) {
   section {
-    margin: 5vh 0 0 0;
+    margin-top: 5vh;
     width: 100%;
     max-width: 1440px;
     display: grid;
@@ -300,6 +302,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 2rem;
 
     .arrowRight {
       background-image: url("./../../../../public/assets/vector/arrowRight.svg");
@@ -537,7 +540,7 @@
 
 @container (max-width: 249px) {
   .labels {
-    margin-top: 0.5rem;
+    // margin-top: 0.5rem;
     padding: var(--padding-smaller);
     gap: var(--gap-smaller);
     grid-template-columns: repeat(2, 1fr);

@@ -1,5 +1,5 @@
 .ultraWide {
-  // width: calc(100vw - 12px);
+  width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -8,7 +8,6 @@
 section {
   width: 100%;
   max-width: 1440px;
-  margin: 5vh 0 0 0;
   display: grid;
   grid-template-columns: 1fr 80% 1fr;
   grid-template-rows: min-content min-content min-content min-content;
@@ -29,11 +28,11 @@ section {
 
     h1 {
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-      font-size: clamp(1.5rem, 5vw, 4rem);
+      font-size: clamp(26px, 2.5vw + 1.5rem, 80px);
       font-weight: 800;
       letter-spacing: -0.07rem;
       text-align: center;
-      margin: 5rem 20px 10px 20px;
+      margin: 3rem 20px 0.8rem 20px;
     }
   }
 
