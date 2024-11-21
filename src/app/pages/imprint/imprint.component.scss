@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  // background-color: rgb(101, 179, 153);
   background-color: var(--primeColor-background);
 }
 
@@ -13,23 +12,100 @@ section {
   height: calc(100vh - 7vh);
   display: grid;
   grid-template-columns: 1fr 80% 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 25% 50% min-content;
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas:
-    " . firstSector . "
-    " . secondSector . "
-    " . thirdSector . ";
+    " . greeting . "
+    " . businessCard . "
+    " . privacyLegalWrapper . ";
 }
 
-.firstSector {
-  grid-area: firstSector;
+.greeting {
+  grid-area: greeting;
+  align-self: center;
+  justify-self: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.07rem;
+  color: var(--primeColor-dark);
+  text-align: center;
+  white-space: nowrap;
 }
 
-.secondSector {
-  grid-area: secondSector;
+.businessCard {
+  grid-area: businessCard;
+  flex-direction: column;
+  gap: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.thirdSector {
-  grid-area: thirdSector;
+.privacyLegalWrapper {
+  grid-area: privacyLegalWrapper;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    align-self: center;
+    justify-self: center;
+  }
+
+  span {
+    font-size: 11px;
+  }
+}
+
+.imprintContent {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 0.1rem solid var(--primeColor-secundario);
+  background-color: var(--primeColor-background);
+  padding: 1rem;
+  border-radius: 0.2rem;
+  transition: all 0.9s ease;
+
+  &:hover {
+    box-shadow: 4px 4px 4px 0px var(--primeColor-secundario-darker);
+    border: 0.1rem solid var(--primeColor-secundario);
+    transition: all 0.9s ease;
+  }
+
+  p {
+    align-self: flex-start;
+    color: var(--primeColor-dark);
+  }
+}
+
+h3 {
+  color: var(--primeColor-secundario-darker);
+}
+
+a[routerLink] {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: var(--primeColor-secundario-darker);
+}
+
+a[routerLink]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primeColor-secundario-darker);
+  transition: width 0.2s ease-in-out;
+}
+
+a[routerLink]:hover::after {
+  width: 100%;
 }

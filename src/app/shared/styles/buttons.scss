@@ -296,4 +296,22 @@
       font-size: 1.2em;
     }
   }
+
+  .routerHome {
+    background-color: var(--btn-contact-white);
+    border: 4px solid var(--btn-contact-background);
+    color: var(--primeColor-dark);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease,
+      font-size 1s ease;
+    box-shadow: unset;
+
+    &:hover {
+      border: 0.3rem solid var(--primeColor-secundario-darker);
+      background-color: var(--primeColor-dark);
+      color: var(--primeColor-white);
+      box-shadow: unset;
+      transform: scaleX(1.2);
+      font-size: 1.2em;
+    }
+  }
 }
