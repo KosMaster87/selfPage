@@ -9,12 +9,13 @@ import { TranslateModule } from '@ngx-translate/core';
   // templateUrl: './call-action-button.component.html',
   template: `
     <div class="btnFlexBox">
-      <a [href]="link" class="buttonLink">
+      <a [href]="link" class="buttonLink" tabindex="-1">
         <button
           class="btnSelf fontOverpass disableTextSelection"
           [attr.type]="buttonType"
           [ngClass]="buttonClass"
           [disabled]="disabled"
+          
         >
           {{ buttonTextRowOne | translate }} <br />
           {{ buttonTextRowTWO | translate }}
