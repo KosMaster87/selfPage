@@ -5,6 +5,10 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
+  // <h2><a [routerLink]="["'/zeug', meinZeugID"]">Zeug</a></h2>
+  // { 
+  //   path: 'zeug/:id', component: ZeugComponent 
+  // },
   {
     path: 'home',
     redirectTo: '',

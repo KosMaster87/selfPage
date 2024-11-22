@@ -109,3 +109,11 @@ a[routerLink]::after {
 a[routerLink]:hover::after {
   width: 100%;
 }
+
+.imprintWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  outline: 1px solid brown;
+}
