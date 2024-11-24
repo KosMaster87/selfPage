@@ -1,0 +1,7 @@
+.hero-scroll {
+  overflow: hidden;
+
+  >svg {
+      animation: slide 5s ease-in infinite;
+  }
+}

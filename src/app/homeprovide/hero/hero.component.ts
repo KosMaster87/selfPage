@@ -8,6 +8,6 @@ import { RouterModule } from '@angular/router';
   selector: 'app-hero',
   imports: [TranslateModule, CommonModule, SharedModule, RouterModule],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss',
+  styleUrls: ['./hero.component.scss', './../../shared/styles/arrowDown.scss'],
 })
 export class HeroComponent {}
