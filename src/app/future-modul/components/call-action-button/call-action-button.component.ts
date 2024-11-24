@@ -1,21 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-call-action-button',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
   // templateUrl: './call-action-button.component.html',
   template: `
     <div class="btnFlexBox">
-      <a [href]="link" class="buttonLink" tabindex="-1">
+      <a
+        [routerLink]="routerLink"
+        [fragment]="fragment"
+        class="buttonLink"
+        tabindex="-1"
+      >
         <button
           class="btnSelf fontOverpass disableTextSelection"
           [attr.type]="buttonType"
           [ngClass]="buttonClass"
           [disabled]="disabled"
-          
         >
           {{ buttonTextRowOne | translate }} <br />
           {{ buttonTextRowTWO | translate }}
@@ -38,6 +43,8 @@ export class CallActionButtonComponent {
   @Input() link: string = '';
   @Input() buttonType: string = 'button';
   @Input() disabled: boolean = false;
+  @Input() routerLink: string | any[] = ''; // Unterstützt auch Arrays wie `['/path', 'to']`
+  @Input() fragment: string = '';
 
   onClick() {
     const element = document.querySelector(this.link);

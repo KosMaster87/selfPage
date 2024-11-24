@@ -9,7 +9,6 @@
 section {
   width: 100%;
   max-width: 1440px;
-  // height: calc(100vh - 7vh);
   display: grid;
   grid-template-columns: 1fr 80% 1fr;
   grid-template-rows: 50vh auto;
@@ -39,7 +38,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding: 2rem 0;
 }
 
 .privacyLegalWrapper {
@@ -48,7 +46,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding: 2rem 0;
+  padding: 2rem 0;
   gap: 2rem;
 
   span {
@@ -89,13 +87,8 @@ section {
   padding: 1rem;
 }
 
-
 .chText {
   width: 80ch;
-}
-
-h3 {
-  color: var(--primeColor-secundario-darker);
 }
 
 a[routerLink] {
@@ -120,3 +113,6 @@ a[routerLink]:hover::after {
   width: 100%;
 }
 
+.privacyLegal {
+  max-width: 80ch;
+}

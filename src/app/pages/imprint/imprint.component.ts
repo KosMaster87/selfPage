@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { SharedModule } from '../../future-modul/shared.module';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-imprint',
-  imports: [RouterLink, SharedModule],
+  imports: [SharedModule, RouterModule],
   templateUrl: './imprint.component.html',
   styleUrls: [
     './imprint.component.scss',

@@ -20,16 +20,20 @@
       <app-call-action-button
         [buttonClass]="'landingButton'"
         [buttonTextRowOne]="'Send message'"
-        [link]="'#contact_component'"
+        [routerLink]="'/'"
+        [fragment]="'contact_component'"
       ></app-call-action-button>
     </div>
 
     <div class="landingPage_thirdSector">
-      <a class="fontOverpass disableTextSelection" href=""
+      <a
+        class="fontOverpass disableTextSelection"
+        [routerLink]="'/'"
+        fragment="contact_component"
         >Konstantin.Aksenov&#64;dev2k.org</a
       >
       <span class="fontOverpass disableTextSelection">
-        <a href="#aboutH1">
+        <a routerLink="/" fragment="aboutH1">
           {{ "scroll" | upperCase }}
           <br />
           {{ "down" | upperCase }}</a

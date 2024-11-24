@@ -46,9 +46,16 @@
         <app-call-action-button
           [buttonClass]="'aboutButton'"
           [buttonTextRowOne]="'Lets talk'"
-          [link]="'#contact_component'"
+          [routerLink]="'/'"
+          [fragment]="'contact_component'"
         >
         </app-call-action-button>
+        <!-- <app-call-action-button
+          [buttonClass]="'aboutButton'"
+          [buttonTextRowOne]="'Lets talk'"
+          [link]="'#contact_component'"
+        >
+        </app-call-action-button> -->
       </div>
 
       <img
@@ -60,7 +67,11 @@
 
     <div class="secondSector">
       <div class="arrowOpposite"></div>
-      <a href="#skills_Component"> <div class="arrowLeft"></div></a>
+      <a 
+      [routerLink]="'/'" 
+      [fragment]="'skills_Component'"
+      > 
+      <div class="arrowLeft"></div></a>
     </div>
   </section>
 </div>

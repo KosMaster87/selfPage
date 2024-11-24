@@ -4,10 +4,17 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../../future-modul/shared.module';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
-  imports: [TranslateModule, FormsModule, SharedModule, CommonModule],
+  imports: [
+    TranslateModule,
+    FormsModule,
+    SharedModule,
+    CommonModule,
+    RouterModule,
+  ],
   templateUrl: './contact.component.html',
   styleUrls: [
     './contact.component.scss',
