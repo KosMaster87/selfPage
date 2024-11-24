@@ -9,20 +9,18 @@
 section {
   width: 100%;
   max-width: 1440px;
-  height: calc(100vh - 7vh);
+  // height: calc(100vh - 7vh);
   display: grid;
   grid-template-columns: 1fr 80% 1fr;
-  grid-template-rows: 25% 50% min-content;
+  grid-template-rows: 50vh auto;
   grid-column-gap: 0;
   grid-row-gap: 0;
   grid-template-areas:
-    " . greeting . "
-    " . businessCard . "
+    " . cardSection . "
     " . privacyLegalWrapper . ";
 }
 
 .greeting {
-  grid-area: greeting;
   align-self: center;
   justify-self: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -34,35 +32,34 @@ section {
   white-space: nowrap;
 }
 
-.businessCard {
-  grid-area: businessCard;
+.cardSection {
+  grid-area: cardSection;
   flex-direction: column;
   gap: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  // padding: 2rem 0;
 }
 
 .privacyLegalWrapper {
   grid-area: privacyLegalWrapper;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  p {
-    align-self: center;
-    justify-self: center;
-  }
+  // padding: 2rem 0;
+  gap: 2rem;
 
   span {
     font-size: 11px;
   }
 }
 
-.imprintContent {
+.businessCard {
   flex-direction: column;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -71,6 +68,7 @@ section {
   padding: 1rem;
   border-radius: 0.2rem;
   transition: all 0.9s ease;
+  padding: 4vw;
 
   &:hover {
     box-shadow: 4px 4px 4px 0px var(--primeColor-secundario-darker);
@@ -79,9 +77,21 @@ section {
   }
 
   p {
-    align-self: flex-start;
     color: var(--primeColor-dark);
   }
+}
+
+.imprintWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+
+.chText {
+  width: 80ch;
 }
 
 h3 {
@@ -110,10 +120,3 @@ a[routerLink]:hover::after {
   width: 100%;
 }
 
-.imprintWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  outline: 1px solid brown;
-}
