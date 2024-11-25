@@ -5,6 +5,7 @@ import { SharedModule } from '../../future-modul/shared.module';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ScrollService } from '../../shared/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -22,6 +23,7 @@ import { RouterModule } from '@angular/router';
   ],
 })
 export class ContactComponent {
+  private scrollService = inject(ScrollService);
   isHighlighted: boolean = false;
   isChecked = false;
   isFocusedName = false;
@@ -89,5 +91,9 @@ export class ContactComponent {
     } else if (field === 'message') {
       this.isFocusedMessage = isFocused;
     }
+  }
+
+  scrollToFragment(fragment: string): void {
+    this.scrollService.scrollToFragment(fragment);
   }
 }

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../../future-modul/shared.module';
 import { RouterModule } from '@angular/router';
+import { ScrollService } from '../../shared/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-skills',
@@ -15,4 +16,9 @@ import { RouterModule } from '@angular/router';
 })
 export class SkillsComponent {
   isHighlighted: boolean = false;
+  private scrollService = inject(ScrollService)
+
+  scrollToFragment(fragment: string): void {
+    this.scrollService.scrollToFragment(fragment);
+  }
 }

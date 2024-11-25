@@ -30,10 +30,24 @@
         class="fontOverpass disableTextSelection"
         [routerLink]="'/'"
         fragment="contact_component"
+        (click)="scrollToFragment('contact_component')"
         >Konstantin.Aksenov&#64;dev2k.org</a
       >
       <span class="fontOverpass disableTextSelection">
-        <a routerLink="/" fragment="aboutH1">
+        <a
+          [routerLink]="'/'"
+          fragment="aboutH1"
+          (click)="scrollToFragment('aboutH1')"
+        >
+          <div class="arrow-container">
+            <div class="arrow-animation">
+              <img
+                src="assets/arrows/scrollArrowDown.svg"
+                alt="Scrolling Arrow"
+              />
+            </div>
+          </div>
+
           {{ "scroll" | upperCase }}
           <br />
           {{ "down" | upperCase }}</a

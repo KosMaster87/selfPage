@@ -14,10 +14,8 @@ export class HighlightingDirective {
   @Input() set appHighlighting(condition: boolean) {
     if (condition) {
       this.renderer.addClass(this.el.nativeElement, 'highlightFont');
-      // console.log('highlight-class is true.');
     } else {
       this.renderer.removeClass(this.el.nativeElement, 'highlightFont');
-      // console.log('highlight-class is false.');
     }
   }
 

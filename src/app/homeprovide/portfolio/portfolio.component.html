@@ -30,7 +30,11 @@
   } } -->
 
     <div class="arrowSector">
-      <a [routerLink]="'/'" [fragment]="'linearGradient'">
+      <a
+        [routerLink]="'/'"
+        [fragment]="'linearGradient'"
+        (click)="scrollToFragment('linearGradient')"
+      >
         <div class="arrowLeft"></div
       ></a>
     </div>

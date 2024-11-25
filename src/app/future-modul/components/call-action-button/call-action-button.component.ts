@@ -11,10 +11,11 @@ import { TranslateModule } from '@ngx-translate/core';
   template: `
     <div class="btnFlexBox">
       <a
-        [routerLink]="routerLink"
-        [fragment]="fragment"
         class="buttonLink"
         tabindex="-1"
+        [routerLink]="routerLink"
+        [fragment]="fragment"
+        (click)="scrollToFragment()"
       >
         <button
           class="btnSelf fontOverpass disableTextSelection"
@@ -43,7 +44,7 @@ export class CallActionButtonComponent {
   @Input() link: string = '';
   @Input() buttonType: string = 'button';
   @Input() disabled: boolean = false;
-  @Input() routerLink: string | any[] = ''; // Unterstützt auch Arrays wie `['/path', 'to']`
+  @Input() routerLink: string | any[] = '';
   @Input() fragment: string = '';
 
   onClick() {
@@ -52,28 +53,17 @@ export class CallActionButtonComponent {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  scrollToFragment(): void {
+    if (this.fragment) {
+      const element = document.querySelector(`#${this.fragment}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.warn(`Fragment mit ID "${this.fragment}" nicht gefunden.`);
+      }
+    } else {
+      console.warn('Kein Fragment definiert.');
+    }
+  }
 }
-
-// ! Oder mit HostBinding; wo die Logick in der Call-Akction-Btn Component drinne ist das entscheidet/ steht in welchen Componenten dieser Butten benutzt wird.
-// import { Component, Input, HostBinding } from '@angular/core';
-
-// @Component({
-//   selector: 'app-call-action-button',
-//   standalone: true,
-//   templateUrl: './call-action-button.component.html',
-//   styleUrls: [
-//     './call-action-button.component.scss',
-//     './../../../shared/styles/buttons.scss',
-//   ],
-// })
-// export class CallActionButtonComponent {
-//   @Input() type: 'contact' | 'landing' = 'contact';
-
-//   @HostBinding('class.contactButton') get isContact() {
-//     return this.type === 'contact';
-//   }
-
-//   @HostBinding('class.landingButton') get isLanding() {
-//     return this.type === 'landing';
-//   }
-// }

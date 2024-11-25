@@ -4,10 +4,6 @@ import { ImprintComponent } from './pages/imprint/imprint.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
-  // <h2><a [routerLink]="["'/zeug', meinZeugID"]">Zeug</a></h2>
-  // { 
-  //   path: 'zeug/:id', component: ZeugComponent 
-  // },
   {
     path: 'home',
     redirectTo: '',
@@ -20,3 +16,4 @@ export const routes: Routes = [
     component: NotFoundComponent,
   },
 ];
+export class AppRoutingModule {}

@@ -67,7 +67,11 @@
     </div>
 
     <div class="secondSector">
-      <a [routerLink]="'/'" [fragment]="'portfolio_Component'">
+      <a
+        [routerLink]="'/'"
+        [fragment]="'portfolio_Component'"
+        (click)="scrollToFragment('portfolio_Component')"
+      >
         <div class="arrowRight"></div
       ></a>
       <div class="arrowOpposite"></div>

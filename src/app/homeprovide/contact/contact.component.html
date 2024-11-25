@@ -225,7 +225,11 @@
     </div>
 
     <div class="homeArraw_Section">
-      <a [routerLink]="'/'" [fragment]="'landingPage_firstSector'">
+      <a
+        [routerLink]="'/'"
+        [fragment]="'landingPage_firstSector'"
+        (click)="scrollToFragment('landingPage_firstSector')"
+      >
         <div class="homeArrow"></div
       ></a>
     </div>
