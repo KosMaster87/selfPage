@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../../future-modul/shared.module';
 import { RouterModule } from '@angular/router';
-import { ScrollService } from '../../shared/services/scroll/scroll.service';
+import { ScrollService } from './../../shared/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-about',
@@ -11,11 +11,12 @@ import { ScrollService } from '../../shared/services/scroll/scroll.service';
   styleUrls: [
     './about.component.scss',
     './../../shared/styles/highlighting.scss',
+    './../../shared/styles/arrowDownLeft.scss',
   ],
 })
 export class AboutComponent {
   isHighlighted: boolean = false;
-  private scrollService = inject(ScrollService)
+  private scrollService = inject(ScrollService);
 
   scrollToFragment(fragment: string): void {
     this.scrollService.scrollToFragment(fragment);

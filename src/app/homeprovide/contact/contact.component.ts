@@ -5,7 +5,7 @@ import { SharedModule } from '../../future-modul/shared.module';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ScrollService } from '../../shared/services/scroll/scroll.service';
+import { ScrollService } from './../../shared/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -25,6 +25,7 @@ import { ScrollService } from '../../shared/services/scroll/scroll.service';
 export class ContactComponent {
   private scrollService = inject(ScrollService);
   isHighlighted: boolean = false;
+  buttonType: string = 'submit';
   isChecked = false;
   isFocusedName = false;
   isFocusedEmail = false;
@@ -32,17 +33,17 @@ export class ContactComponent {
   http = inject(HttpClient);
   mailTest = false;
 
-  contactData = {
-    name: '',
-    email: '',
-    message: '',
-  };
-
   // contactData = {
-  //   name: 'Oroku Saki',
-  //   email: 'mySuperDupaFoundation@Shredder.de',
-  //   message: 'Some text; Any lorem ipsum.',
+  //   name: '',
+  //   email: '',
+  //   message: '',
   // };
+
+  contactData = {
+    name: 'Oroku Saki',
+    email: 'mySuperDupaFoundation@Shredder.de',
+    message: 'Some text; Any lorem ipsum.',
+  };
 
   post = {
     endPoint: 'https://portfolio.dev2k.org/contact/sendMail.php',

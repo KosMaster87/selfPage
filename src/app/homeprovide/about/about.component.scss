@@ -76,20 +76,11 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
-
-    .arrowLeft {
-      background-image: url("./../../../../public/assets/vector/arrowLeft.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: clamp(50px, 20vw, 150px);
-      height: clamp(50px, 20vw, 150px);
-    }
   }
 }
 
 @media screen and (max-width: 720px) and (orientation: landscape) {
   section {
-    // margin-top: 4rem;
     padding: 5vh 0 0 0;
     width: 100%;
     max-width: 1440px;
@@ -159,14 +150,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-
-    .arrowLeft {
-      background-image: url("./../../../../public/assets/vector/arrowLeft.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: clamp(50px, 20vw, 150px);
-      height: clamp(50px, 20vw, 150px);
-    }
   }
 }
 
@@ -241,14 +224,6 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
-
-    .arrowLeft {
-      background-image: url("./../../../../public/assets/vector/arrowLeft.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: clamp(50px, 20vw, 150px);
-      height: clamp(50px, 20vw, 150px);
-    }
   }
 }
 
@@ -325,14 +300,6 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
-
-    .arrowLeft {
-      background-image: url("./../../../../public/assets/vector/arrowLeft.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: clamp(50px, 20vw, 150px);
-      height: clamp(50px, 20vw, 150px);
-    }
   }
 }
 
@@ -426,22 +393,14 @@
     grid-area: secondSector;
     width: 100%;
     padding: 4rem;
-    justify-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    justify-self: center;
 
     .arrowOpposite {
       flex: 1;
-    }
-
-    .arrowLeft {
-      background-image: url("./../../../../public/assets/vector/arrowLeft.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: clamp(50px, 20vw, 150px);
-      height: clamp(50px, 20vw, 150px);
     }
   }
 }

@@ -10,7 +10,7 @@
           About me
         </h1>
 
-        <!-- ! Variante block -->
+        <!-- * Variante block -->
         <p class="fontOverpass disableTextSelection">
           Hello, I am a German-speaking frontend developer living in Loma Plata,
           Paraguay. Driven by the endless possibilities in the IT world, I am
@@ -28,7 +28,7 @@
           late night hours, thanks to the different time zones.
         </p>
 
-        <!-- ! Variante inline -->
+        <!-- * Variante inline -->
         <!-- <span class="fontOverpass disableTextSelection">
           Hello, I am a German-speaking frontend developer living in Loma Plata,
           Paraguay. Driven by the endless possibilities in the IT world, I am
@@ -50,12 +50,6 @@
           [fragment]="'contact_component'"
         >
         </app-call-action-button>
-        <!-- <app-call-action-button
-          [buttonClass]="'aboutButton'"
-          [buttonTextRowOne]="'Lets talk'"
-          [link]="'#contact_component'"
-        >
-        </app-call-action-button> -->
       </div>
 
       <img
@@ -72,8 +66,15 @@
         [fragment]="'skills_Component'"
         (click)="scrollToFragment('skills_Component')"
       >
-        <div class="arrowLeft"></div
-      ></a>
+        <div class="arrowContainer">
+          <div class="arrowAnimation">
+            <img
+              src="assets/arrows/scrollArrowDown.svg"
+              alt="Scrolling Arrow"
+            />
+          </div>
+        </div>
+      </a>
     </div>
   </section>
 </div>

@@ -10,24 +10,33 @@ import { TranslateModule } from '@ngx-translate/core';
   // templateUrl: './call-action-button.component.html',
   template: `
     <div class="btnFlexBox">
-      <a
-        class="buttonLink"
-        tabindex="-1"
+      <button
+        *ngIf="buttonType !== 'submit'"
+        class="btnSelf fontOverpass disableTextSelection"
+        [attr.type]="buttonType"
+        [ngClass]="buttonClass"
+        [disabled]="disabled"
         [routerLink]="routerLink"
         [fragment]="fragment"
         (click)="scrollToFragment()"
       >
-        <button
-          class="btnSelf fontOverpass disableTextSelection"
-          [attr.type]="buttonType"
-          [ngClass]="buttonClass"
-          [disabled]="disabled"
-        >
-          {{ buttonTextRowOne | translate }} <br />
-          {{ buttonTextRowTWO | translate }}
-        </button>
-      </a>
+        {{ buttonTextRowOne | translate }} <br />
+        {{ buttonTextRowTWO | translate }}
+      </button>
     </div>
+
+    <button
+      *ngIf="buttonType === 'submit'"
+      class="btnSelf fontOverpass disableTextSelection"
+      [attr.type]="buttonType"
+      [ngClass]="buttonClass"
+      [disabled]="disabled"
+      [routerLink]="routerLink"
+      [fragment]="fragment"
+    >
+      {{ buttonTextRowOne | translate }} <br />
+      {{ buttonTextRowTWO | translate }}
+    </button>
   `,
   styleUrls: [
     './call-action-button.component.scss', // Basic style and responsive.

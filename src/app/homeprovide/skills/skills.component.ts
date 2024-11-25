@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../../future-modul/shared.module';
 import { RouterModule } from '@angular/router';
-import { ScrollService } from '../../shared/services/scroll/scroll.service';
+import { ScrollService } from './../../shared/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-skills',

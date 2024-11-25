@@ -57,14 +57,6 @@ app-project {
   justify-content: flex-end;
   grid-area: arrowSector;
   padding: 2rem;
-
-  .arrowLeft {
-    background-image: url("./../../../../public/assets/vector/arrowLeft.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: clamp(50px, 20vw, 150px);
-    height: clamp(50px, 20vw, 150px);
-  }
 }
 
 @media screen and (max-width: 720px) and (orientation: portrait) {
