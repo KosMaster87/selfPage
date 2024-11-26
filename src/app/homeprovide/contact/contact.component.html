@@ -19,8 +19,6 @@
       </div>
 
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <!-- -------------------------------------------------------------------- -->
-
         <div
           class="inputWrapper inputWrapper_name"
           [ngClass]="{
@@ -40,8 +38,8 @@
             (focus)="onFocus('name', true)"
             (blur)="onFocus('name', false)"
             placeholder=""
-            required
             autocomplete="off"
+            required
             pattern="^[a-zA-Z]+ [a-zA-Z]+$"
             [(ngModel)]="contactData.name"
             #name="ngModel"
@@ -59,12 +57,6 @@
           </div>
 
           @if (name.invalid && name.touched) {
-          <!-- @if(name.errors.required) {
-        <span class="errorText">Your name is required. </span>
-        } @if(name.errors.pattern) {
-        <span class="errorText">Please enter your full name. </span
-        >} -->
-
           <small
             class="errorText fontOverpass disableTextSelection"
             *ngIf="name.errors?.['required']"
@@ -80,8 +72,6 @@
           </small>
           }
         </div>
-
-        <!-- -------------------------------------------------------------------- -->
 
         <div
           class="inputWrapper inputWrapper_email"
@@ -137,8 +127,6 @@
           }
         </div>
 
-        <!-- -------------------------------------------------------------------- -->
-
         <div
           class="textareaWrapper textareaWrapper_message"
           [ngClass]="{
@@ -180,8 +168,6 @@
           >}
         </div>
 
-        <!-- -------------------------------------------------------------------- -->
-
         <div class="checkboxWrapper_checkbox">
           <div class="chechbox_main">
             <input
@@ -212,8 +198,6 @@
           }
         </div>
 
-        <!-- -------------------------------------------------------------------- -->
-
         <app-call-action-button
           [buttonClass]="'contactButton'"
           [buttonTextRowOne]="'Send message'"
@@ -233,6 +217,5 @@
         <div class="homeArrow"></div
       ></a>
     </div>
-    c
   </section>
 </div>
