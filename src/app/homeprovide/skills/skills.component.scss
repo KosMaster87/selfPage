@@ -498,6 +498,14 @@
   flex-direction: column;
 }
 
+.rotate-left {
+  transform: rotate(-45deg);
+}
+
+.rotate-right {
+  transform: rotate(45deg);
+}
+
 @container (max-width: 249px) {
   .labels {
     // margin-top: 0.5rem;

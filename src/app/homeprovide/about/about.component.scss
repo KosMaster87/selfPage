@@ -5,6 +5,14 @@
   align-items: center;
 }
 
+.rotate-left {
+  transform: rotate(-45deg);
+}
+
+.rotate-right {
+  transform: rotate(45deg);
+}
+
 @media screen and (max-width: 720px) and (orientation: portrait) {
   section {
     margin-top: 4rem;

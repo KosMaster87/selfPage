@@ -35,7 +35,14 @@
         [fragment]="'linearGradient'"
         (click)="scrollToFragment('linearGradient')"
       >
-        <app-scroll-to-fragment-right></app-scroll-to-fragment-right>
+        <div
+          [ngClass]="{
+            'rotate-left': rotatingArrowIsLeft,
+            'rotate-right': !rotatingArrowIsLeft
+          }"
+        >
+          <app-scroll-to-fragment-optional></app-scroll-to-fragment-optional>
+        </div>
       </a>
     </div>
   </section>

@@ -5,6 +5,14 @@
   flex-direction: column;
 }
 
+.rotate-left {
+  transform: rotate(-45deg);
+}
+
+.rotate-right {
+  transform: rotate(45deg);
+}
+
 section {
   width: 100%;
   max-width: 1440px;
@@ -66,10 +74,10 @@ app-project {
     grid-column-gap: 0px;
     grid-row-gap: 0rem;
     grid-template-areas:
-    " . header . "
-    " . text . "
-    " . project . "
-    " . arrowSector . ";
+      " . header . "
+      " . text . "
+      " . project . "
+      " . arrowSector . ";
   }
 
   .arrowSector {

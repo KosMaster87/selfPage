@@ -1,20 +1,9 @@
+@use "sass:math";
+
 $circle-w: 100px;
-$circle-bg: #fff;
-$arrow-bg: #55544f;
-$body-bg: #9ddcdc;
 $bezier: cubic-bezier(0.77, 0, 0.175, 1);
 $bezier-bounce: cubic-bezier(0.87, -0.41, 0.19, 1.44);
 $anim-timing: 3s;
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-}
-body {
-  background-color: $body-bg;
-}
 
 .ico {
   margin: 0 auto;
@@ -25,8 +14,9 @@ body {
   top: 50%;
   transform: translateY(-50%);
   filter: url("#goo");
+
   .circle {
-    background: $circle-bg;
+    background: var(--primeColor-background);
     border-radius: 50%;
     display: inline-block;
     height: $circle-w;
@@ -39,15 +29,15 @@ body {
     transform-origin: 0%;
 
     &.circle-top {
-      height: $circle-w / 3;
-      width: $circle-w / 2.4;
+      height: math.div($circle-w, 3);
+      width: math.div($circle-w, 2.4);
       animation: blob-1-anim $anim-timing $bezier infinite;
       z-index: 0;
       top: 0;
     }
     &.circle-bottom {
-      height: $circle-w / 3;
-      width: $circle-w / 2.4;
+      height: math.div($circle-w, 3);
+      width: math.div($circle-w, 2.4);
       animation: blob-2-anim $anim-timing $bezier infinite;
       z-index: 9;
       bottom: 0px;
@@ -55,7 +45,7 @@ body {
   }
 
   .st-arrow {
-    fill: $arrow-bg;
+    fill: var(--primeColor-dark);
     animation: scrolly $anim-timing $bezier forwards infinite;
     perspective: 9000px;
     transform: translateZ(0);
@@ -64,6 +54,7 @@ body {
 }
 
 .svg {
+  // outline: 1px solid red;
   z-index: 9;
   position: relative;
 }

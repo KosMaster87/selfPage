@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from './../../future-modul/shared.module';
 import { ProjectComponent } from './project/project/project.component';
 import { ScrollService } from './../../shared/services/scroll/scroll.service';
-import { ScrollToFragmentRightComponent } from './../../future-modul/components/scroll-to-fragment-right/scroll-to-fragment-right.component';
+import { ScrollToFragmentOptionalComponent } from './../../future-modul/components/scroll-to-fragment-optional/scroll-to-fragment-optional.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -15,7 +15,7 @@ import { ScrollToFragmentRightComponent } from './../../future-modul/components/
     TranslateModule,
     SharedModule,
     RouterModule,
-    ScrollToFragmentRightComponent,
+    ScrollToFragmentOptionalComponent,
   ],
   templateUrl: './portfolio.component.html',
 
@@ -25,6 +25,7 @@ import { ScrollToFragmentRightComponent } from './../../future-modul/components/
   ],
 })
 export class PortfolioComponent {
+  rotatingArrowIsLeft = false;
   isHighlighted: boolean = false;
   private scrollService = inject(ScrollService);
 

@@ -72,7 +72,14 @@
         [fragment]="'portfolio_Component'"
         (click)="scrollToFragment('portfolio_Component')"
       >
-        <app-scroll-to-fragment-left></app-scroll-to-fragment-left>
+        <div
+          [ngClass]="{
+            'rotate-left': rotatingArrowIsLeft,
+            'rotate-right': !rotatingArrowIsLeft
+          }"
+        >
+          <app-scroll-to-fragment-optional></app-scroll-to-fragment-optional>
+        </div>
       </a>
       <div class="arrowOpposite"></div>
     </div>

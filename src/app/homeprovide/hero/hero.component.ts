@@ -8,9 +8,15 @@ import { ScrollToFragmentComponent } from './../../future-modul/components/scrol
 
 @Component({
   selector: 'app-hero',
-  imports: [TranslateModule, CommonModule, SharedModule, RouterModule, ScrollToFragmentComponent],
+  imports: [
+    TranslateModule,
+    CommonModule,
+    SharedModule,
+    RouterModule,
+    ScrollToFragmentComponent,
+  ],
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss',],
+  styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent {
   private scrollService = inject(ScrollService);

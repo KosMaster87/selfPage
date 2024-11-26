@@ -1,17 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './../../future-modul/shared.module';
 import { ScrollService } from './../../shared/services/scroll/scroll.service';
-import { ScrollToFragmentRightComponent } from './../../future-modul/components/scroll-to-fragment-right/scroll-to-fragment-right.component';
+import { ScrollToFragmentOptionalComponent } from './../../future-modul/components/scroll-to-fragment-optional/scroll-to-fragment-optional.component';
 
 @Component({
   selector: 'app-about',
   imports: [
+    CommonModule,
+    RouterModule,
     TranslateModule,
     SharedModule,
-    RouterModule,
-    ScrollToFragmentRightComponent,
+    ScrollToFragmentOptionalComponent,
   ],
   templateUrl: './about.component.html',
   styleUrls: [
@@ -20,6 +22,7 @@ import { ScrollToFragmentRightComponent } from './../../future-modul/components/
   ],
 })
 export class AboutComponent {
+  rotatingArrowIsLeft = false;
   isHighlighted: boolean = false;
   private scrollService = inject(ScrollService);
 
