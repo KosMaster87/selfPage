@@ -1,15 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../future-modul/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './../../future-modul/shared.module';
 import { ScrollService } from './../../shared/services/scroll/scroll.service';
+import { ScrollToFragmentComponent } from './../../future-modul/components/scroll-to-fragment/scroll-to-fragment.component';
 
 @Component({
   selector: 'app-hero',
-  imports: [TranslateModule, CommonModule, SharedModule, RouterModule],
+  imports: [TranslateModule, CommonModule, SharedModule, RouterModule, ScrollToFragmentComponent],
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss', './../../shared/styles/arrowDown.scss'],
+  styleUrls: ['./hero.component.scss',],
 })
 export class HeroComponent {
   private scrollService = inject(ScrollService);

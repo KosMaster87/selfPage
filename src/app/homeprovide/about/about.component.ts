@@ -1,17 +1,22 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { SharedModule } from '../../future-modul/shared.module';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './../../future-modul/shared.module';
 import { ScrollService } from './../../shared/services/scroll/scroll.service';
+import { ScrollToFragmentRightComponent } from './../../future-modul/components/scroll-to-fragment-right/scroll-to-fragment-right.component';
 
 @Component({
   selector: 'app-about',
-  imports: [TranslateModule, SharedModule, RouterModule],
+  imports: [
+    TranslateModule,
+    SharedModule,
+    RouterModule,
+    ScrollToFragmentRightComponent,
+  ],
   templateUrl: './about.component.html',
   styleUrls: [
     './about.component.scss',
     './../../shared/styles/highlighting.scss',
-    './../../shared/styles/arrowDownLeft.scss',
   ],
 })
 export class AboutComponent {

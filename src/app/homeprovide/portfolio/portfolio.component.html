@@ -35,62 +35,8 @@
         [fragment]="'linearGradient'"
         (click)="scrollToFragment('linearGradient')"
       >
-        <div class="arrowContainer">
-          <div class="arrowAnimation">
-            <img src="assets/arrows/arrowLeftDown.svg" alt="Scrolling Arrow" />
-          </div>
-        </div>
+        <app-scroll-to-fragment-right></app-scroll-to-fragment-right>
       </a>
     </div>
   </section>
 </div>
-
-<!-- -------------------------------------------------------------------- -->
-
-<!-- @defer (prefetch on idle) { @for (item of items; track $index) {
-  <app-project></app-project>} } @placeholder {
-  <div class="placeholder">Placeholder</div>
-  }  -->
-
-<!-- -------------------------------------------------------------------- -->
-
-<!-- DEFERABLE => Aufschieben = Weitere möglichkeiten. -->
-<!-- @defer (on viewport) { -->
-
-<!-- @defer (on hover) { -->
-
-<!-- Draufklicken. -->
-<!-- @defer (on interaction) { -->
-
-<!-- @defer (on timer(2000)) { -->
-<!-- @defer (on hover; on timer(2000)) { -->
-
-<!-- Soll wohl wenn man in der Komponente selber was mit einem Flag was erreichen will. -->
-<!-- <button ((click)="isVisible = true" )>Load</button> -->
-<!-- @defer (when isVisible) { -->
-
-<!-- <button ((click)="isVisible = true" )>Show</button> -->
-<!-- <button ((click)="prefetchCondition = true" )>Load</button> -->
-<!-- @defer (when isVisible; prefetch when prefetchCondition) { -->
-
-<!-- Homepage ist aufgebaut. -->
-<!-- @defer (on immediate) { -->
-
-<!-- @defer (prefetch on idle) { -->
-
-<!-- Full notation of defer! -->
-<!-- @defer (on viewport) {
-      <app-project></app-project> 
-    } 
-    
-    @loading {after 150ms; minimum 150ms} {
-      <div>loading</div>
-    }
-    
-    @placeholder (minimum 150ms) {
-      <div class="placeholder">Placeholder</div>
-    }
-    
-    @error {
-      <div>Error</div>
-    } -->

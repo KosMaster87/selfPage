@@ -1,5 +1,3 @@
-import { CommonModule } from '@angular/common';
-
 import {
   Component,
   AfterViewInit,
@@ -7,11 +5,11 @@ import {
   ChangeDetectorRef,
   inject,
 } from '@angular/core';
-
-import { PortfolioDataService } from './../../../../shared/services/portfolioData/portfolio-data.service';
+import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { PortfolioDataService } from './../../../../shared/services/portfolioData/portfolio-data.service';
 import { Project } from './../../../../models/project/project';
-import { SharedModule } from '../../../../future-modul/shared.module';
+import { SharedModule } from './../../../../future-modul/shared.module';
 
 @Component({
   selector: 'app-project',

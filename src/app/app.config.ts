@@ -4,7 +4,7 @@ import {
   provideZoneChangeDetection,
 } from '@angular/core';
 
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
@@ -14,7 +14,13 @@ import { createTranslateLoader } from './shared/services/translationLoader/trans
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
+    provideRouter(
+      routes,
+      // withInMemoryScrolling({
+      //   scrollPositionRestoration: 'top',
+      //   anchorScrolling: 'enabled',
+      // })
+    ),
     provideAnimations(),
     provideHttpClient(),
 

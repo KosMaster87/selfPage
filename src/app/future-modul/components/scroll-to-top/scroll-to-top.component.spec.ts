@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ScrollingArrowComponent } from './scrolling-arrow.component';
+import { ScrollToTopComponent } from './scroll-to-top.component';
 
-describe('ScrollingArrowComponent', () => {
-  let component: ScrollingArrowComponent;
-  let fixture: ComponentFixture<ScrollingArrowComponent>;
+describe('ScrollToTopComponent', () => {
+  let component: ScrollToTopComponent;
+  let fixture: ComponentFixture<ScrollToTopComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ScrollingArrowComponent]
+      imports: [ScrollToTopComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ScrollingArrowComponent);
+    fixture = TestBed.createComponent(ScrollToTopComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

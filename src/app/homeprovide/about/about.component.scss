@@ -310,7 +310,7 @@
     max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 80% 1fr;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: 1fr 40%;
     grid-column-gap: 0px;
     grid-row-gap: 0rem;
     grid-template-areas:
@@ -402,5 +402,9 @@
     .arrowOpposite {
       flex: 1;
     }
+
+    // a {
+    //   width: 80px;
+    // }
   }
 }
