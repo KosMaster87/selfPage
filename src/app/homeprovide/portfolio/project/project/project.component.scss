@@ -85,6 +85,8 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -100,6 +102,10 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
+  }
+
+  .mainProjectBox:hover img {
+    filter: grayscale(0%);
   }
 
   .slider {
@@ -133,23 +139,6 @@ button {
       border: 2px solid transparent;
       transition: transform 1s ease, border 1s ease, opacity 0.7s ease;
     }
-
-    // .rectangle.active {
-    //   animation: slideIn 1s ease forwards;
-    //   border: 2px solid black;
-    //   transform: scale(1.05);
-    // }
-
-    // @keyframes slideIn {
-    //   0% {
-    //     transform: translate(0%, 0%);
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     transform: translate(2%, 4%);
-    //     opacity: 1;
-    //   }
-    // }
 
     .hoverArrow {
       position: absolute;
@@ -190,9 +179,6 @@ button {
       transform: translateY(-100%);
       opacity: 0;
       transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-      // transform: translateY(0);
-      // opacity: 1;
-      // transition: none;
     }
 
     .infoBox.active {
@@ -241,10 +227,6 @@ button {
       padding-top: 0.2rem;
     }
   }
-
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
 
   .even {
     .toTheRightSideBox {
@@ -366,6 +348,8 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -381,6 +365,10 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
+  }
+
+  .mainProjectBox:hover img {
+    filter: grayscale(0%);
   }
 
   .slider {
@@ -414,23 +402,6 @@ button {
       border: 4px solid transparent;
       transition: transform 1s ease, border 1s ease, opacity 0.7s ease;
     }
-
-    // .rectangle.active {
-    //   animation: slideIn 1s ease forwards;
-    //   border: 4px solid black;
-    //   transform: scale(1.05);
-    // }
-
-    // @keyframes slideIn {
-    //   0% {
-    //     transform: translate(0%, 0%);
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     transform: translate(2%, 4%);
-    //     opacity: 1;
-    //   }
-    // }
 
     .hoverArrow {
       position: absolute;
@@ -471,9 +442,6 @@ button {
       transform: translateY(-100%);
       opacity: 0;
       transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-      // transform: translateY(0);
-      // opacity: 1;
-      // transition: none;
     }
 
     .infoBox.active {
@@ -522,10 +490,6 @@ button {
       padding-top: 1rem;
     }
   }
-
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
 
   .even {
     .toTheRightSideBox {
@@ -648,6 +612,8 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -663,6 +629,10 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
+  }
+
+  .mainProjectBox:hover img {
+    filter: grayscale(0%);
   }
 
   .slider {
@@ -696,23 +666,6 @@ button {
       border: 4px solid transparent;
       transition: transform 1s ease, border 1s ease, opacity 0.7s ease;
     }
-
-    // .rectangle.active {
-    //   animation: slideIn 1s ease forwards;
-    //   border: 4px solid black;
-    //   transform: scale(1.05);
-    // }
-
-    // @keyframes slideIn {
-    //   0% {
-    //     transform: translate(0%, 0%);
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     transform: translate(2%, 4%);
-    //     opacity: 1;
-    //   }
-    // }
 
     .hoverArrow {
       position: absolute;
@@ -753,9 +706,6 @@ button {
       transform: translateY(-100%);
       opacity: 0;
       transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-      // transform: translateY(0);
-      // opacity: 1;
-      // transition: none;
     }
 
     .infoBox.active {
@@ -804,10 +754,6 @@ button {
       padding-top: 1rem;
     }
   }
-
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
 
   .even {
     .hoverArrow {
@@ -930,6 +876,8 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -945,6 +893,10 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
+  }
+
+  .mainProjectBox:hover img {
+    filter: grayscale(0%);
   }
 
   .slider {
@@ -978,23 +930,6 @@ button {
       border: 4px solid transparent;
       transition: transform 1s ease, border 1s ease, opacity 0.7s ease;
     }
-
-    // .rectangle.active {
-    //   animation: slideIn 1s ease forwards;
-    //   border: 4px solid black;
-    //   transform: scale(1.05);
-    // }
-
-    // @keyframes slideIn {
-    //   0% {
-    //     transform: translate(0%, 0%);
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     transform: translate(2%, 4%);
-    //     opacity: 1;
-    //   }
-    // }
 
     .hoverArrow {
       position: absolute;
@@ -1035,9 +970,6 @@ button {
       transform: translateY(-100%);
       opacity: 0;
       transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-      // transform: translateY(0);
-      // opacity: 1;
-      // transition: none;
     }
 
     .infoBox.active {
@@ -1086,10 +1018,6 @@ button {
       padding-top: 1rem;
     }
   }
-
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
 
   .even {
     .toTheRightSideBox {
@@ -1213,6 +1141,8 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -1228,6 +1158,10 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
+  }
+
+  .mainProjectBox:hover img {
+    filter: grayscale(0%);
   }
 
   .slider {
@@ -1261,23 +1195,6 @@ button {
       border: 2.25px solid transparent;
       transition: transform 1s ease, border 0.2s ease, opacity 0.2s ease;
     }
-
-    // .rectangle.active {
-    //   animation: slideIn 1s ease forwards;
-    //   border: 2.25px solid black;
-    //   transform: scale(1.05);
-    // }
-
-    // @keyframes slideIn {
-    //   0% {
-    //     transform: translate(0%, 0%);
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     transform: translate(2%, 4%);
-    //     opacity: 1;
-    //   }
-    // }
 
     .hoverArrow {
       position: absolute;
@@ -1314,13 +1231,9 @@ button {
       padding-left: 0;
       padding-bottom: 0;
       aspect-ratio: 16 / 9;
-
       transform: translateX(-100%);
       opacity: 0;
       transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-      // transform: translateY(0);
-      // opacity: 1;
-      // transition: none;
     }
 
     .infoBox.active {
@@ -1369,10 +1282,6 @@ button {
       padding-top: 1rem;
     }
   }
-
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
-  // -------------------------------------------------------------
 
   .even {
     .infoBox {
@@ -1487,9 +1396,6 @@ button {
       flex: 1;
       display: flex;
       align-items: center;
-      // justify-content: center;
-      // justify-content: flex-end;
-
       width: 100%;
 
       h2 {
@@ -1497,7 +1403,6 @@ button {
         font-size: clamp(1rem, 1vw + 0.75rem, 1.75rem);
         font-weight: 700;
         margin-top: 2rem;
-        // padding-left: 2rem;
       }
     }
   }
@@ -1524,6 +1429,8 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
     }
 
     .transparentDiv {
@@ -1539,6 +1446,10 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
+  }
+
+  .mainProjectBox:hover img {
+    filter: grayscale(0%);
   }
 
   .slider {
@@ -1572,39 +1483,7 @@ button {
     opacity: 1;
     border: 4px solid transparent;
     transition: transform 1s ease, border 1s ease, opacity 0.7s ease;
-
-    // &:hover {
-    //   animation: slideIn 1s ease forwards;
-    //   border: 4px solid black;
-    //   transform: scale(1.05);
-    // }
   }
-
-  // @keyframes slideIn {
-  //   0% {
-  //     transform: translate(0%, 0%);
-  //     opacity: 0;
-  //   }
-  //   100% {
-  //     transform: translate(2%, 4%);
-  //     opacity: 1;
-  //   }
-  // }
-
-  // .rectangle:not(:hover) {
-  //   animation: slideOut 1s ease forwards;
-  // }
-
-  // @keyframes slideOut {
-  //   0% {
-  //     transform: translate(2%, 4%);
-  //     opacity: 1;
-  //   }
-  //   100% {
-  //     transform: translate(0%, 0%);
-  //     opacity: 0;
-  //   }
-  // }
 
   .hoverArrow {
     position: absolute;
@@ -1640,12 +1519,9 @@ button {
     justify-content: flex-end;
     flex-direction: column;
 
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-    // transform: translateX(0);
-    // opacity: 1;
-    // transition: none;
+    // transform: translateX(-100%);
+    // opacity: 0;
+    // transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
 
     &:hover {
       transform: translateX(0);
@@ -1653,18 +1529,11 @@ button {
     }
   }
 
-  // SOLL
   .rectangle:hover + .infoBox {
     transform: translateX(0);
     opacity: 1;
     transition-delay: 0.5s;
   }
-
-  // Siehe "project-reverse"
-  // .mainProjectBox:hover .infoBox {
-  //   transform: translateX(0);
-  //   opacity: 1;
-  // }
 
   .innerBox {
     padding-left: 2.5rem;
@@ -1703,10 +1572,6 @@ button {
     }
   }
 
-  // -----------------------------------------------------------
-  // -----------------------------------------------------------
-  // -----------------------------------------------------------
-
   .even {
     padding-left: 1.5rem;
 
@@ -1731,10 +1596,7 @@ button {
     .infoBox {
       transform: translateX(-100%);
       opacity: 0;
-      transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-      // transform: translateX(0);
-      // opacity: 1;
-      // transition: none;
+      transition: transform 0.3s ease 0.3s, opacity 0.33s ease 0.5s;
 
       &:hover {
         transform: translateX(0);
@@ -1821,10 +1683,8 @@ button {
     .infoBox {
       transform: translateX(100%);
       opacity: 0;
-      transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-      // transform: translateX(0);
-      // opacity: 1;
-      // transition: none;
+      transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s;
+      
 
       &:hover {
         transform: translateX(0);

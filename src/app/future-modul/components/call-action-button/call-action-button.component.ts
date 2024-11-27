@@ -68,11 +68,23 @@ export class CallActionButtonComponent {
       const element = document.querySelector(`#${this.fragment}`);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        console.warn(`Fragment mit ID "${this.fragment}" nicht gefunden.`);
       }
-    } else {
-      console.warn('Kein Fragment definiert.');
     }
   }
+
+  /**
+   * Debugging
+   */
+  // scrollToFragment(): void {
+  //   if (this.fragment) {
+  //     const element = document.querySelector(`#${this.fragment}`);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: 'smooth' });
+  //     } else {
+  //       console.warn(`Fragment mit ID "${this.fragment}" nicht gefunden.`);
+  //     }
+  //   } else {
+  //     console.warn('Kein Fragment definiert.');
+  //   }
+  // }
 }
