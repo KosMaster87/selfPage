@@ -85,8 +85,6 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
-      filter: grayscale(100%);
-      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -102,10 +100,6 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
-  }
-
-  .mainProjectBox:hover img {
-    filter: grayscale(0%);
   }
 
   .slider {
@@ -348,8 +342,6 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
-      filter: grayscale(100%);
-      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -367,8 +359,262 @@ button {
     }
   }
 
-  .mainProjectBox:hover img {
-    filter: grayscale(0%);
+  .slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    width: 100%;
+    max-width: unset;
+    min-height: unset;
+    max-height: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    gap: 0.5rem;
+
+    .rectangle {
+      flex: 1;
+      width: 100%;
+      z-index: 10;
+      max-height: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 5px;
+      position: relative;
+      opacity: 1;
+      border: 4px solid transparent;
+      transition: transform 1s ease, border 1s ease, opacity 0.7s ease;
+    }
+
+    .hoverArrow {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 2rem;
+      height: 2rem;
+      margin-right: -30px;
+      background-image: url(./../../../../../../public/assets/vector/hoverArraw.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      transform-origin: center;
+      transition: transform 1.5s ease, opacity 0.2s ease;
+      transform: translate(-35%, -40%) rotate(45deg);
+      opacity: 0;
+    }
+
+    .rectangle.active .hoverArrow {
+      transform: translate(-35%, -40%) rotate(175deg) scale(1);
+      opacity: 1;
+    }
+
+    .infoBox {
+      flex: 1;
+      width: 100%;
+      max-height: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 0;
+      padding-bottom: 0;
+      aspect-ratio: 16 / 9;
+
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
+    }
+
+    .infoBox.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .innerBox {
+    padding-left: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-self: flex-start;
+
+    h2 {
+      font-size: clamp(1.25rem, 5vw + 0.25rem, 1.75rem);
+      text-align: left;
+      color: rgb(22, 21, 21);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    h3 {
+      font-size: clamp(0.938rem, 3vw + 0.25rem, 1.438rem);
+      text-align: left;
+      font-weight: 400;
+      white-space: nowrap;
+      color: rgb(0, 188, 143);
+    }
+
+    p {
+      font-size: clamp(0.625rem, 2vw, 1rem);
+      text-align: left;
+      font-weight: 400;
+      text-wrap: balance;
+      max-width: 40ch;
+    }
+
+    .btnBox {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-self: flex-start;
+      padding-top: 1rem;
+    }
+  }
+
+  .even {
+    .toTheRightSideBox {
+      flex-direction: row-reverse;
+    }
+
+    .hoverArrow {
+      left: 0;
+    }
+
+    .rectangle.active .hoverArrow {
+      transform: translate(-50%, -40%) rotate(100deg) scale(1);
+    }
+
+    .rectangle.active {
+      animation: slideInEven 1s ease forwards;
+      border: 2px solid black;
+      transform: scale(1.05);
+    }
+
+    @keyframes slideInEven {
+      0% {
+        transform: translate(0%, 0%);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(2%, 4%);
+        opacity: 1;
+      }
+    }
+  }
+
+  .odd {
+    .innerBox {
+      align-items: flex-end;
+      align-self: flex-end;
+
+      p {
+        text-align: right;
+      }
+
+      div {
+        align-self: flex-end;
+      }
+    }
+
+    .rectangle.active {
+      animation: slideInOdd 1s ease forwards;
+      border: 2px solid black;
+      transform: scale(1.05);
+    }
+
+    @keyframes slideInOdd {
+      0% {
+        transform: translate(0%, 0%);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-2%, 4%);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) and (orientation: landscape) {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toTheRightSideBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .blancoBox {
+      flex: 1;
+      width: 100%;
+    }
+
+    .h2Box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      h2 {
+        text-shadow: 4px 3px 20px rgba(0, 0, 0, 0.38);
+        font-size: clamp(1rem, 1vw + 0.75rem, 1.75rem);
+        font-weight: 700;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .mainProjectBox {
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+    max-height: unset;
+    min-height: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    gap: 0.5rem;
+
+    img {
+      flex: 1;
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+      z-index: 10;
+    }
+
+    .transparentDiv {
+      flex: 1;
+      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: transparent;
+      pointer-events: none;
+      visibility: hidden;
+    }
   }
 
   .slider {
@@ -492,276 +738,12 @@ button {
   }
 
   .even {
-    .toTheRightSideBox {
-      flex-direction: row-reverse;
-    }
-
     .hoverArrow {
       left: 0;
     }
 
     .rectangle.active .hoverArrow {
       transform: translate(-50%, -40%) rotate(100deg) scale(1.2);
-    }
-
-    .rectangle.active {
-      animation: slideInEven 1s ease forwards;
-      border: 2px solid black;
-      transform: scale(1.05);
-    }
-
-    @keyframes slideInEven {
-      0% {
-        transform: translate(0%, 0%);
-        opacity: 0;
-      }
-      100% {
-        transform: translate(2%, 4%);
-        opacity: 1;
-      }
-    }
-  }
-
-  .odd {
-    .innerBox {
-      align-items: flex-end;
-      align-self: flex-end;
-
-      p {
-        text-align: right;
-      }
-
-      div {
-        align-self: flex-end;
-      }
-    }
-
-    .rectangle.active {
-      animation: slideInOdd 1s ease forwards;
-      border: 2px solid black;
-      transform: scale(1.05);
-    }
-
-    @keyframes slideInOdd {
-      0% {
-        transform: translate(0%, 0%);
-        opacity: 0;
-      }
-      100% {
-        transform: translate(-2%, 4%);
-        opacity: 1;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 720px) and (orientation: landscape) {
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .toTheRightSideBox {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-    .blancoBox {
-      flex: 1;
-      width: 100%;
-    }
-
-    .h2Box {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-
-      h2 {
-        text-shadow: 4px 3px 20px rgba(0, 0, 0, 0.38);
-        font-size: clamp(1rem, 1vw + 0.75rem, 1.75rem);
-        font-weight: 700;
-        margin-top: 1rem;
-      }
-    }
-  }
-
-  .mainProjectBox {
-    position: relative;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    max-width: unset;
-    max-height: unset;
-    min-height: unset;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 0.5rem;
-    gap: 0.5rem;
-
-    img {
-      flex: 1;
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      object-fit: cover;
-      aspect-ratio: 16 / 9;
-      z-index: 10;
-      filter: grayscale(100%);
-      transition: filter 0.5s ease;
-    }
-
-    .transparentDiv {
-      flex: 1;
-      max-height: 100%;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: transparent;
-      pointer-events: none;
-      visibility: hidden;
-    }
-  }
-
-  .mainProjectBox:hover img {
-    filter: grayscale(0%);
-  }
-
-  .slider {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 5px;
-    width: 100%;
-    max-width: unset;
-    min-height: unset;
-    max-height: unset;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 0.5rem;
-    gap: 0.5rem;
-
-    .rectangle {
-      flex: 1;
-      width: 100%;
-      z-index: 10;
-      max-height: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-      border-radius: 5px;
-      position: relative;
-      opacity: 1;
-      border: 4px solid transparent;
-      transition: transform 1s ease, border 1s ease, opacity 0.7s ease;
-    }
-
-    .hoverArrow {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: 2rem;
-      height: 2rem;
-      margin-right: -30px;
-      background-image: url(./../../../../../../public/assets/vector/hoverArraw.svg);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 50%;
-      transform-origin: center;
-      transition: transform 1.5s ease, opacity 0.2s ease;
-      transform: translate(-35%, -40%) rotate(45deg);
-      opacity: 0;
-    }
-
-    .rectangle.active .hoverArrow {
-      transform: translate(-35%, -40%) rotate(175deg) scale(1.5);
-      opacity: 1;
-    }
-
-    .infoBox {
-      flex: 1;
-      width: 100%;
-      max-height: 100%;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding-left: 0;
-      padding-bottom: 0;
-      aspect-ratio: 16 / 9;
-
-      transform: translateY(-100%);
-      opacity: 0;
-      transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
-    }
-
-    .infoBox.active {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  .innerBox {
-    padding-left: 0;
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    align-self: flex-start;
-
-    h2 {
-      font-size: clamp(1.25rem, 5vw + 0.25rem, 1.75rem);
-      text-align: left;
-      color: rgb(22, 21, 21);
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    h3 {
-      font-size: clamp(0.938rem, 3vw + 0.25rem, 1.438rem);
-      text-align: left;
-      font-weight: 400;
-      white-space: nowrap;
-      color: rgb(0, 188, 143);
-    }
-
-    p {
-      font-size: clamp(0.625rem, 2vw, 1rem);
-      text-align: left;
-      font-weight: 400;
-      text-wrap: balance;
-      max-width: 40ch;
-    }
-
-    .btnBox {
-      display: flex;
-      flex-direction: row;
-      gap: 0.5rem;
-      align-self: flex-start;
-      padding-top: 1rem;
-    }
-  }
-
-  .even {
-    .hoverArrow {
-      left: 0;
-    }
-
-    .rectangle.active .hoverArrow {
-      transform: translate(-50%, -40%) rotate(100deg) scale(1.25);
     }
 
     .rectangle.active {
@@ -876,8 +858,6 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
-      filter: grayscale(100%);
-      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -893,10 +873,6 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
-  }
-
-  .mainProjectBox:hover img {
-    filter: grayscale(0%);
   }
 
   .slider {
@@ -1141,8 +1117,6 @@ button {
       object-fit: cover;
       aspect-ratio: 16 / 9;
       z-index: 10;
-      filter: grayscale(100%);
-      transition: filter 0.5s ease;
     }
 
     .transparentDiv {
@@ -1158,10 +1132,6 @@ button {
       pointer-events: none;
       visibility: hidden;
     }
-  }
-
-  .mainProjectBox:hover img {
-    filter: grayscale(0%);
   }
 
   .slider {
@@ -1295,7 +1265,7 @@ button {
     }
 
     .rectangle.active .hoverArrow {
-      transform: translate(-50%, -40%) rotate(0deg) scale(1.25);
+      transform: translate(-50%, -40%) rotate(0deg) scale(1.2);
     }
 
     .rectangle.active {
@@ -1350,7 +1320,7 @@ button {
 
     .rectangle.active .hoverArrow {
       left: 0;
-      transform: translate(-50%, -40%) rotate(-100deg) scale(1.25);
+      transform: translate(-50%, -40%) rotate(-100deg) scale(1.2);
     }
 
     .rectangle.active {
@@ -1504,7 +1474,7 @@ button {
   }
 
   .rectangle:hover .hoverArrow {
-    transform: translate(-35%, -40%) rotate(0deg) scale(1.5);
+    transform: translate(-35%, -40%) rotate(0deg) scale(1.2);
     opacity: 1;
   }
 
@@ -1518,10 +1488,6 @@ button {
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
-
-    // transform: translateX(-100%);
-    // opacity: 0;
-    // transition: transform 0.5s ease 0.6s, opacity 0.5s ease 0.6s;
 
     &:hover {
       transform: translateX(0);
@@ -1684,7 +1650,6 @@ button {
       transform: translateX(100%);
       opacity: 0;
       transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s;
-      
 
       &:hover {
         transform: translateX(0);
@@ -1698,7 +1663,7 @@ button {
     }
 
     .rectangle:hover .hoverArrow {
-      transform: translate(-50%, -40%) rotate(270deg) scale(1.5);
+      transform: translate(-50%, -40%) rotate(270deg) scale(1.2);
     }
 
     .rectangle {

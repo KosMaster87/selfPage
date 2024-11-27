@@ -26,7 +26,6 @@ import { ScrollToTopComponent } from './../../future-modul/components/scroll-to-
 })
 export class ContactComponent {
   private scrollService = inject(ScrollService);
-  isHighlighted: boolean = false;
   buttonType: string = 'submit';
   isChecked = false;
   isFocusedName = false;

@@ -23,7 +23,6 @@ import { ScrollToFragmentOptionalComponent } from './../../future-modul/componen
 })
 export class AboutComponent {
   rotatingArrowIsLeft = false;
-  isHighlighted: boolean = false;
   private scrollService = inject(ScrollService);
 
   scrollToFragment(fragment: string): void {

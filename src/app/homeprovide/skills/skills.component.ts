@@ -20,11 +20,12 @@ import { ScrollToFragmentOptionalComponent } from './../../future-modul/componen
   styleUrls: [
     './skills.component.scss',
     './../../shared/styles/highlighting.scss',
+    './../../shared/styles/iconHover.scss',
   ],
 })
 export class SkillsComponent {
   rotatingArrowIsLeft = true;
-  isHighlighted: boolean = false;
+
   private scrollService = inject(ScrollService);
 
   scrollToFragment(fragment: string): void {

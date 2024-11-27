@@ -22,7 +22,6 @@ import { SharedModule } from './../../../../future-modul/shared.module';
   ],
 })
 export class ProjectComponent implements AfterViewInit {
-  isHighlighted: boolean = false;
   public isVisible = false;
   private el: ElementRef = inject(ElementRef);
   private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
