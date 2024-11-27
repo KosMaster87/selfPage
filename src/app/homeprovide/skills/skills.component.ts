@@ -20,7 +20,7 @@ import { ScrollToFragmentOptionalComponent } from './../../future-modul/componen
   styleUrls: [
     './skills.component.scss',
     './../../shared/styles/highlighting.scss',
-    './../../shared/styles/iconHover.scss',
+    './../../shared/styles/iconHover-skills.scss',
   ],
 })
 export class SkillsComponent {

@@ -90,7 +90,16 @@ a[routerLink]:hover::after {
     gap: 3rem;
   }
 
+  .socialIconWrapper {
+    position: relative;
+    display: inline-block;
+    width: clamp(1.25rem, 1vw + 1rem, 1.875rem);
+    height: clamp(1.25rem, 1vw + 1rem, 3.75rem);
+  }
+
   .socialIconSelf {
+    display: inline-block;
+    cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -156,7 +165,16 @@ a[routerLink]:hover::after {
       gap: 2rem;
       padding-right: 0.5rem;
 
+      .socialIconWrapper {
+        position: relative;
+        display: inline-block;
+        width: clamp(1.25rem, 1vw + 1rem, 1.875rem);
+        height: clamp(1.25rem, 1vw + 1rem, 3.75rem);
+      }
+
       .socialIconSelf {
+        display: inline-block;
+        cursor: pointer;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -173,11 +191,11 @@ a[routerLink]:hover::after {
 }
 
 .socialGit {
-  background-image: url(./../../../../../public/assets/vector/social/social-git.svg);
+  background-image: url("./../../../../../public/assets/vector/social/social-git.svg");
 }
 .socialMail {
-  background-image: url(./../../../../../public/assets/vector/social/social-mail.svg);
+  background-image: url("./../../../../../public/assets/vector/social/social-mail.svg");
 }
 .socialIn {
-  background-image: url(./../../../../../public/assets/vector/social/social-in.svg);
+  background-image: url("./../../../../../public/assets/vector/social/social-in.svg");
 }
