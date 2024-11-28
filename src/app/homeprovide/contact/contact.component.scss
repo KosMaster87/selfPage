@@ -25,11 +25,11 @@
 }
 
 .validIcon {
-  background-image: url("./../../../../public/assets/vector/valid.svg");
+  background-image: url("./../../../../public/assets/vector/checkbox/valid.svg");
 }
 
 .errorIcon {
-  background-image: url("./../../../../public/assets/vector/invalid.svg");
+  background-image: url("./../../../../public/assets/vector/checkbox/invalid.svg");
 }
 
 .errorText {
@@ -397,7 +397,7 @@ app-call-action-button {
   justify-content: flex-end;
 
   .homeArrow {
-    background-image: url("./../../../../public/assets/arrows/arrowTop.svg");
+    background-image: url("./../../../../public/assets/vector/arrows/arrowTop.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: clamp(50px, 20vw, 60px);
