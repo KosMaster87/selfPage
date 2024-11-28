@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './../../future-modul/shared.module';
 import { ScrollService } from './../../shared/services/scroll/scroll.service';
-import { ScrollToFragmentComponent } from './../../future-modul/components/scroll-to-fragment/scroll-to-fragment.component';
+import { ScrollToFragmentComponent } from './../../future-modul/components/scroll-to-fragment-down/scroll-to-fragment.component';
 
 @Component({
   selector: 'app-hero',

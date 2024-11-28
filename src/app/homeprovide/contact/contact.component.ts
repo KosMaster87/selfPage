@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './../../future-modul/shared.module';
 import { ScrollService } from './../../shared/services/scroll/scroll.service';
-import { ScrollToTopComponent } from './../../future-modul/components/scroll-to-top/scroll-to-top.component';
+import { ScrollToTopComponent } from './../../future-modul/components/scroll-to-fragment-top/scroll-to-top.component';
 
 @Component({
   selector: 'app-contact',

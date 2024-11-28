@@ -14,4 +14,8 @@ export class ScrollToTopComponent {
   scrollToFragment(fragment: string): void {
     this.scrollService.scrollToFragment(fragment);
   }
+
+  // scrollToTop() {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }
 }
