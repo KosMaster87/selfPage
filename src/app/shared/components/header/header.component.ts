@@ -16,7 +16,7 @@ export class HeaderComponent {
   scrollToFragment(fragment: string): void {
     this.scrollService.scrollToFragment(fragment);
   }
-
+  
   translateText(lang: string) {
     this.languageChanged.emit(lang);
   }

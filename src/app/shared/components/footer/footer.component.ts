@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SharedModule } from './../../../future-modul/shared.module';
-import { ScrollService } from './../../services/scroll/scroll.service';
+import { ScrollService } from '../../services/scroll/scroll.service';
 
 @Component({
   selector: 'app-footer',

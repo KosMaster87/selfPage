@@ -202,8 +202,10 @@
               for="checkboxSelf"
               ><small
                 >I've read the
-                <a class="checkboxPolicy" routerLink="/imprint">privacy policy</a> and agree
-                to the processing of my data as outlined.</small
+                <a class="checkboxPolicy" routerLink="/imprint"
+                  >privacy policy</a
+                >
+                and agree to the processing of my data as outlined.</small
               ></label
             >
           </div>
@@ -216,6 +218,7 @@
         </div>
 
         <app-call-action-button
+          [ngClass]="eigeneKlasse"
           [buttonClass]="'contactButton'"
           [buttonTextRowOne]="'Send message'"
           [buttonType]="'submit'"

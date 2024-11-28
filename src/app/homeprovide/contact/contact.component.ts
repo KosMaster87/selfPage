@@ -43,6 +43,8 @@ export class ContactComponent {
     this.checkboxHovered = isHovered;
   }
 
+  eigeneKlasse: string = '';
+
   // contactData = {
   //   name: '',
   //   email: '',

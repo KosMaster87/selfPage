@@ -18,12 +18,12 @@ export class AppComponent {
 
   ngOnInit() {
     this.setDefaultLanguage();
-    this.route.fragment.subscribe((fragment: string | null) => {
-      const element = document.getElementById(fragment ?? '');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
+    // this.route.fragment.subscribe((fragment: string | null) => {
+    //   const element = document.getElementById(fragment ?? '');
+    //   if (element) {
+    //     element.scrollIntoView({ behavior: 'smooth' });
+    //   }
+    // });
   }
 
   private setDefaultLanguage() {
