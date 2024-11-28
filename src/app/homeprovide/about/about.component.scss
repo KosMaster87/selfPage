@@ -70,7 +70,7 @@
     position: relative;
     margin: 2rem 0;
 
-    .recangel {
+    .rectangle {
       position: absolute;
       width: clamp(180px, 28vw + 3rem, 240px);
       z-index: 10;
@@ -90,7 +90,7 @@
     }
   }
 
-  .portraitWrapper:hover .recangel {
+  .portraitWrapper:hover .rectangle {
     transform: translate(8px, 8px);
     border: 0.18rem solid black;
   }
@@ -164,7 +164,7 @@
     position: relative;
     margin: 6rem 0 0 1rem;
 
-    .recangel {
+    .rectangle {
       position: absolute;
       width: clamp(180px, 20vw + 3rem, 200px);
       z-index: 10;
@@ -184,7 +184,7 @@
     }
   }
 
-  .portraitWrapper:hover .recangel {
+  .portraitWrapper:hover .rectangle {
     transform: translate(8px, 8px);
     border: 0.18rem solid black;
   }
@@ -259,7 +259,7 @@
     position: relative;
     margin: 2rem 0;
 
-    .recangel {
+    .rectangle {
       position: absolute;
       width: clamp(220px, 10vw + 8rem, 240px);
       z-index: 10;
@@ -279,7 +279,7 @@
     }
   }
 
-  .portraitWrapper:hover .recangel {
+  .portraitWrapper:hover .rectangle {
     transform: translate(8px, 8px);
     border: 0.18rem solid black;
   }
@@ -356,7 +356,7 @@
     justify-content: flex-start;
     margin: 14rem auto 0 2rem;
 
-    .recangel {
+    .rectangle {
       position: absolute;
       width: clamp(200px, 10vw + 7rem, 280px);
       z-index: 10;
@@ -376,7 +376,7 @@
     }
   }
 
-  .portraitWrapper:hover .recangel {
+  .portraitWrapper:hover .rectangle {
     transform: translate(8px, 8px);
     border: 0.18rem solid black;
   }
@@ -452,7 +452,7 @@
     justify-content: flex-start;
     margin: 8rem auto 0 4rem;
 
-    .recangel {
+    .rectangle {
       position: absolute;
       transform: translate(2px, 2px);
       width: clamp(240px, 12vw + 5rem, 300px);
@@ -473,7 +473,7 @@
     }
   }
 
-  .portraitWrapper:hover .recangel {
+  .portraitWrapper:hover .rectangle {
     transform: translate(8px, 8px);
     border: 0.18rem solid black;
   }
