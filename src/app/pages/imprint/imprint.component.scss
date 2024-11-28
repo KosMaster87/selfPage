@@ -24,7 +24,6 @@ section {
   align-self: center;
   justify-self: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
   font-weight: 800;
   letter-spacing: -0.07rem;
   color: var(--primeColor-dark);
@@ -114,6 +113,22 @@ a[routerLink]:hover::after {
   width: 100%;
 }
 
-.privacyLegal {
-  max-width: 80ch;
+@media screen and (max-width: 1024px) {
+  .greeting {
+    font-size: clamp(1rem, 2.5vw + 0.5rem, 2.25rem);
+  }
+
+  .privacyLegal {
+    max-width: clamp(220px, 80ch, 720px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .greeting {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  }
+
+  .privacyLegal {
+    max-width: 80ch;
+  }
 }
