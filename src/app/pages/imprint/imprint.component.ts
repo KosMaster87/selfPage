@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SharedModule } from '../../future-modul/shared.module';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './../../future-modul/shared.module';
 
 @Component({
   selector: 'app-imprint',
