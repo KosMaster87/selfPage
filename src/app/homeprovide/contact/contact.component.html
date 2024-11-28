@@ -165,6 +165,14 @@
           >}
         </div>
 
+        <!-- [src]="imgCheckIconSrc"
+        (mouseover)="
+          imgCheckIconSrc = 'assets/img/footer/linkedin_button_hover.svg'
+        "
+        (mouseout)="
+          imgCheckIconSrc = 'assets/img/footer/linkedin_button.svg'
+        " -->
+
         <div class="checkboxWrapper_checkbox">
           <div class="chechbox_main">
             <input
@@ -176,6 +184,15 @@
               name="checkbox"
               #checkbox="ngModel"
             />
+
+            <label class="checkboxIconLabel" for="checkboxSelf">
+              <img [src]="isChecked ? 'assets/img/checkbox-checked.svg' : 'assets/img/checkbox-unchecked.svg'" 
+                   alt="Checkbox" 
+                   class="checkboxIcon" 
+                   (mouseover)="checkIconHover" 
+                   (mouseout)="checkIconDefault" 
+              />
+            </label>
 
             <label
               class="checkboxLabel fontOverpass disableTextSelection"

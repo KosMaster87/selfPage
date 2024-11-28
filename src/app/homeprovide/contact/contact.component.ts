@@ -28,11 +28,21 @@ export class ContactComponent {
   private scrollService = inject(ScrollService);
   buttonType: string = 'submit';
   isChecked = false;
+  checkIconDefault: string = 'assets/img/footer/linkedin_button.svg';
+  checkIconHover: string = 'assets/img/footer/linkedin_button.svg';
+
+
+
   isFocusedName = false;
   isFocusedEmail = false;
   isFocusedMessage = false;
   http = inject(HttpClient);
   mailTest = false;
+
+  onCheckboxChange() {
+    console.log('Checkbox changed: ', this.isChecked);
+    // Hier kannst du weitere Logik hinzufügen, z.B. Validierungen
+  }
 
   // contactData = {
   //   name: '',

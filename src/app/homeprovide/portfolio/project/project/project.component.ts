@@ -38,8 +38,18 @@ export class ProjectComponent implements AfterViewInit {
     return num % 2 === 0 ? 'even' : 'odd';
   }
 
+  // openLink(url: string) {
+  //   window.open(url, '_blank');
+  // }
+
   openLink(url: string) {
-    window.open(url, '_blank');
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   ngAfterViewInit() {
