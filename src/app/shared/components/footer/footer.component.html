@@ -2,7 +2,12 @@
   <div class="footer_section">
     <div class="footerContent">
       <div class="leftWrapper">
-        <img class="pageLogo" src="assets/images/terminal_logo.svg" />
+        <a
+          routerLink="/home"
+          fragment="landingPage_firstSector"
+          (click)="scrollToFragment('landingPage_firstSector')"
+          ><img class="pageLogo" src="assets/images/terminal_logo.svg"
+        /></a>
         <span class="copyRight fontOverpass disableTextSelection"
           >© Konstantin Aksenov 2025</span
         >
@@ -33,8 +38,11 @@
             ></a>
           </div>
         </div>
+
         <span class="legal fontOverpass disableTextSelection"
-          ><a routerLink="/imprint">Privacy Policy & Legal Notice</a></span
+          ><a class="imprintHover" routerLink="/imprint"
+            >Privacy Policy & Legal Notice</a
+          ></span
         >
       </div>
     </div>
@@ -67,7 +75,13 @@
             ></a>
           </div>
         </div>
-        <img class="pageLogo" src="assets/images/terminal_logo.svg" />
+
+        <a
+          routerLink="/home"
+          fragment="landingPage_firstSector"
+          (click)="scrollToFragment('landingPage_firstSector')"
+          ><img class="pageLogo" src="assets/images/terminal_logo.svg"
+        /></a>
       </div>
 
       <div class="rightWrapper">
@@ -75,7 +89,9 @@
           >Konstantin.Aksenov&#64;dev2k.org</span
         >
         <span class="legal fontOverpass disableTextSelection"
-          ><a routerLink="/imprint">Privacy Policy & Legal Notice</a></span
+          ><a class="imprintHover" routerLink="/imprint"
+            >Privacy Policy & Legal Notice</a
+          ></span
         >
       </div>
     </div>

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SharedModule } from '../../../future-modul/shared.module';
+import { SharedModule } from './../../../future-modul/shared.module';
+import { ScrollService } from './../../services/scroll/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,4 +12,10 @@ import { SharedModule } from '../../../future-modul/shared.module';
     './../../../shared/styles/iconHover-social.scss',
   ],
 })
-export class FooterComponent {}
+export class FooterComponent {
+  private scrollService = inject(ScrollService);
+
+  scrollToFragment(fragment: string): void {
+    this.scrollService.scrollToFragment(fragment);
+  }
+}

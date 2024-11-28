@@ -2,7 +2,10 @@
   <div class="headerOuterSelf">
     <div class="headerSelfInner">
       <div class="navLeft">
-        <a routerLink="['/']" href="https://portfolio.dev2k.org/"
+        <a
+          routerLink="/home"
+          fragment="landingPage_firstSector"
+          (click)="scrollToFragment('landingPage_firstSector')"
           ><img class="pageLogo" src="assets/images/terminal_logo.svg" /></a
         ><span class="fontSyne disableTextSelection pageSelfSlogen">dev2k</span>
       </div>

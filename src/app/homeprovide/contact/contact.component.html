@@ -165,18 +165,10 @@
           >}
         </div>
 
-        <!-- [src]="imgCheckIconSrc"
-        (mouseover)="
-          imgCheckIconSrc = 'assets/img/footer/linkedin_button_hover.svg'
-        "
-        (mouseout)="
-          imgCheckIconSrc = 'assets/img/footer/linkedin_button.svg'
-        " -->
-
         <div class="checkboxWrapper_checkbox">
           <div class="chechbox_main">
             <input
-              class="checkboxSelf"
+              class="checkboxSelf checkboxHidden"
               id="checkboxSelf"
               type="checkbox"
               placeholder=""
@@ -185,21 +177,32 @@
               #checkbox="ngModel"
             />
 
-            <label class="checkboxIconLabel" for="checkboxSelf">
-              <img [src]="isChecked ? 'assets/img/checkbox-checked.svg' : 'assets/img/checkbox-unchecked.svg'" 
-                   alt="Checkbox" 
-                   class="checkboxIcon" 
-                   (mouseover)="checkIconHover" 
-                   (mouseout)="checkIconDefault" 
+            <div class="checkboxImgWrapper">
+              <img
+                [src]="
+                  checkboxHovered
+                    ? isChecked
+                      ? 'assets/vector/checkbox/checkbox-hovered-checked.svg'
+                      : 'assets/vector/checkbox/checkbox-hovered.svg'
+                    : isChecked
+                    ? 'assets/vector/checkbox/checkbox-checked.svg'
+                    : 'assets/vector/checkbox/checkbox-unchecked.svg'
+                "
+                alt="Checkbox as image."
+                class="checkboxIcon"
+                c
+                (mouseover)="onHover(true)"
+                (mouseout)="onHover(false)"
+                (click)="toggleCheckbox()"
               />
-            </label>
+            </div>
 
             <label
               class="checkboxLabel fontOverpass disableTextSelection"
               for="checkboxSelf"
               ><small
                 >I've read the
-                <a class="checkboxPolicy" href="#">privacy policy</a> and agree
+                <a class="checkboxPolicy" routerLink="/imprint">privacy policy</a> and agree
                 to the processing of my data as outlined.</small
               ></label
             >

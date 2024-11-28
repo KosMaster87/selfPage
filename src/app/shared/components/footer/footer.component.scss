@@ -11,14 +11,14 @@
   display: none;
 }
 
-a[routerLink] {
+.imprintHover[routerLink] {
   cursor: pointer;
   text-decoration: none;
   position: relative;
   color: var(--primeColor-white);
 }
 
-a[routerLink]::after {
+.imprintHover[routerLink]::after {
   content: "";
   position: absolute;
   left: 0;
@@ -29,7 +29,7 @@ a[routerLink]::after {
   transition: width 0.2s ease-in-out;
 }
 
-a[routerLink]:hover::after {
+.imprintHover[routerLink]:hover::after {
   width: 100%;
 }
 
