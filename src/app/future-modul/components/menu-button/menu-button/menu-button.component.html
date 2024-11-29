@@ -1,3 +1,9 @@
 <div class="btnWrapper">
-  <button class="btnSelf">{{ btnName }}</button>
+  <button
+    class="btnSelf fontOverpass disableTextSelection"
+    [class.isClicked]="isBtnClicked"
+    (click)="clickedBtn()"
+  >
+    {{ btnName }}
+  </button>
 </div>

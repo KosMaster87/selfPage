@@ -1,30 +1,48 @@
 @media screen and (min-width: 1025px) {
   .btnWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 320px;
-    height: 75px;
+    position: relative;
   }
 
   .btnSelf {
-    flex: 0 1 0;
-    min-width: fit-content;
-    text-align: center;
-    width: clamp(100px, 20% + 0.4rem, 200px);
-    height: clamp(30px, 12% + 3rem, 60px);
-    font-size: clamp(0.6rem, 1.4vw + 0.2rem, 1.2rem);
-    border-radius: 2px;
-    transition: background-color 0.3s ease, color 0.5s ease;
-    padding: clamp(0.1rem, 0.1vw + 0.8rem, 1rem) clamp(1rem, 1.2vw + 2rem, 3rem);
-    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
-    white-space: nowrap;
     cursor: pointer;
+    position: relative;
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.813rem);
+    padding: 0.8rem 1.5rem;
+    width: 20vw;
+    background: transparent;
+    border: none;
+    font-weight: 700;
+    white-space: nowrap;
+    letter-spacing: -0.07rem;
+    transition: background-color 0.3s ease, color 0.5s ease;
+    // outline: 2px solid red;
+  }
 
-    &:hover {
-      box-shadow: 1px 1px 4px 0px rgba(0, 188, 143, 0.25);
-    }
+  .btnSelf::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: transparent transparent var(--primeColor-dark)
+      var(--primeColor-dark);
+    transition: width 0.5s ease;
+  }
+
+  .btnSelf:hover::after {
+    width: 100%;
+  }
+
+  .btnSelf.isClicked::after {
+    width: 100%;
+    height: 80px;
+    height: clamp(3rem, 4vw + 2rem, 5.5rem);
+    border-style: solid;
+    border-color: var(--primeColor-dark) var(--primeColor-dark)
+      var(--primeColor-dark) var(--primeColor-dark);
+    transition: width 0.5s ease, height 0s ease, transition-delay 1s;
   }
 }

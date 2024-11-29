@@ -4,11 +4,18 @@ import { Component, Input } from '@angular/core';
   selector: 'app-menu-button',
   imports: [],
   templateUrl: './menu-button.component.html',
-  styleUrls: [
-    './menu-button.component.scss', // Basic style and responsive.
-    './../../../../shared/styles/menuBtn.scss', // Change color and else.
-  ],
+  styleUrls: ['./menu-button.component.scss'],
 })
 export class MenuButtonComponent {
   @Input() btnName!: string;
+
+  isBtnClicked: boolean = false;
+
+  clickedBtn() {
+    this.isBtnClicked = true;
+
+    setTimeout(() => {
+      this.isBtnClicked = false;
+    }, 1000);
+  }
 }
