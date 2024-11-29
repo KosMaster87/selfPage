@@ -13,54 +13,33 @@
       <div class="navRight" style="display: flex">
         <nav class="navBarSelf">
           <div class="langDiv">
-            <img
-              class="langImage"
-              src="assets/images/de.png"
-              (click)="translateText('de')"
-            />
-            <img
-              class="langImage"
-              src="assets/images/en.png"
-              (click)="translateText('en')"
-            />
+            <div class="langGermanWrapper">
+              <img
+                class="langImage german"
+                src="assets/images/de.png"
+                [class.active]="currentLanguage === 'de'"
+                (click)="translateText('de')"
+                (click)="changeLanguage('de')"
+                appHighlighting
+              />
+            </div>
+
+            <div class="langEnglishWrapper">
+              <img
+                class="langImage english"
+                src="assets/images/en.png"
+                [class.active]="currentLanguage === 'en'"
+                (click)="translateText('en')"
+                (click)="changeLanguage('en')"
+                appHighlighting
+              />
+            </div>
           </div>
         </nav>
 
-        <div
-          class="burgerMenuBtn"
-          id="burgerMenuBtn"
-          style="display: flex"
-        ></div>
-        <svg
-          width="25"
-          height="25"
-          viewBox="0 0 32 31"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style="display: flex"
-        >
-          <path
-            class="line line1"
-            d="M1 1.5127H31"
-            stroke="black"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            class="line line2"
-            d="M1 15.5127H31"
-            stroke="black"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            class="line line3"
-            d="M1 29.5127H31"
-            stroke="black"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-        </svg>
+        <div class="menuWrapper">
+          <app-hamburger-menu-btn></app-hamburger-menu-btn>
+        </div>
       </div>
     </div>
   </div>

@@ -1,3 +1,9 @@
+@media screen and (max-width: 350px) {
+  .langImage {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 720px) and (orientation: portrait) {
   .headerOuterSelf {
     width: 100%;
@@ -32,7 +38,7 @@
   .navRight {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
 
     .navBarSelf {
       display: flex;
@@ -47,8 +53,6 @@
 
         .langImage {
           height: 30px;
-          border-radius: 5px;
-          border: solid whitesmoke 1px;
         }
       }
 
@@ -56,25 +60,6 @@
         display: flex;
         gap: 0.5rem;
       }
-    }
-  }
-
-  .burgerMenuBtn {
-    margin: 0 1rem;
-
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    .line {
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .line1 {
-      transform-origin: 10% 10%;
-    }
-
-    .line3 {
-      transform-origin: 10% 90%;
     }
   }
 }
@@ -113,7 +98,7 @@
   .navRight {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
 
     .navBarSelf {
       display: flex;
@@ -128,8 +113,6 @@
 
         .langImage {
           height: 30px;
-          border-radius: 5px;
-          border: solid whitesmoke 1px;
         }
       }
 
@@ -137,25 +120,6 @@
         display: flex;
         gap: 0.5rem;
       }
-    }
-  }
-
-  .burgerMenuBtn {
-    margin: 0 1rem;
-
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    .line {
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .line1 {
-      transform-origin: 10% 10%;
-    }
-
-    .line3 {
-      transform-origin: 10% 90%;
     }
   }
 }
@@ -194,7 +158,7 @@
   .navRight {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
 
     .navBarSelf {
       display: flex;
@@ -209,8 +173,6 @@
 
         .langImage {
           height: 30px;
-          border-radius: 5px;
-          border: solid whitesmoke 1px;
         }
       }
 
@@ -218,25 +180,6 @@
         display: flex;
         gap: 0.5rem;
       }
-    }
-  }
-
-  .burgerMenuBtn {
-    margin: 0 1rem;
-
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    .line {
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .line1 {
-      transform-origin: 10% 10%;
-    }
-
-    .line3 {
-      transform-origin: 10% 90%;
     }
   }
 }
@@ -275,7 +218,7 @@
   .navRight {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 3rem;
 
     .navBarSelf {
       display: flex;
@@ -290,8 +233,6 @@
 
         .langImage {
           height: 30px;
-          border-radius: 5px;
-          border: solid whitesmoke 1px;
         }
       }
 
@@ -299,25 +240,6 @@
         display: flex;
         gap: 0.5rem;
       }
-    }
-  }
-
-  .burgerMenuBtn {
-    margin: 0 1rem;
-
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    .line {
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .line1 {
-      transform-origin: 10% 10%;
-    }
-
-    .line3 {
-      transform-origin: 10% 90%;
     }
   }
 }
@@ -357,7 +279,7 @@
   .navRight {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 3rem;
 
     .navBarSelf {
       display: flex;
@@ -372,8 +294,6 @@
 
         .langImage {
           height: 30px;
-          border-radius: 5px;
-          border: solid whitesmoke 1px;
         }
       }
 
@@ -383,25 +303,6 @@
       }
     }
   }
-
-  .burgerMenuBtn {
-    margin: 0 1rem;
-
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    .line {
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .line1 {
-      transform-origin: 10% 10%;
-    }
-
-    .line3 {
-      transform-origin: 10% 90%;
-    }
-  }
 }
 
 .ultraWide {
@@ -409,4 +310,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.langImage {
+  cursor: pointer;
 }

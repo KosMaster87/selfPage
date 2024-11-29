@@ -11,10 +11,10 @@
   --gap-medium: clamp(50px, 0.1rem, 70px);
 
   --primeColor-background: rgb(230, 228, 227);
-  --primeColor-background: rgb(128, 122, 119);
   --primeColor-light: whitesmoke;
   --primeColor-white: rgb(255, 252, 243);
   --primeColor-dark: rgb(34, 31, 31);
+  --primeColor-menu: rgba(187, 187, 187, 0.958);
 
   --primeColor-secundario: rgb(0, 188, 143);
   --primeColor-secundario-darker: rgb(1, 108, 83);
@@ -67,4 +67,8 @@ body {
   -webkit-user-select: none; /* Für Webkit-Browser */
   -moz-user-select: none; /* Für Firefox */
   -ms-user-select: none; /* Für Internet Explorer */
+}
+
+.no-scroll {
+  overflow: hidden;
 }

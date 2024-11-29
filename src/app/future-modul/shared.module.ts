@@ -4,6 +4,8 @@ import { CallActionButtonComponent } from './components/call-action-button/call-
 import { toUpperCase } from './pipes/toUpperCase.pipe';
 import { HighlightingDirective } from './directives/highlighting/highlighting.directive';
 import { IconHoverDirective } from './directives/icon-hover/icon-hover.directive';
+import { NoScrollDirective } from './directives/no-Scroll/no-scroll.directive';
+import { MenuButtonComponent } from './components/menu-button/menu-button/menu-button.component';
 
 @NgModule({
   imports: [
@@ -12,6 +14,8 @@ import { IconHoverDirective } from './directives/icon-hover/icon-hover.directive
     toUpperCase,
     HighlightingDirective,
     IconHoverDirective,
+    NoScrollDirective,
+    MenuButtonComponent
   ],
   exports: [
     HighlightingDirective,
