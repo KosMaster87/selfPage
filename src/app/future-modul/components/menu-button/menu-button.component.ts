@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class MenuButtonComponent {
   @Input() btnName!: string;
+  @Input() sectionId!: string;
 
   isBtnClicked: boolean = false;
 

@@ -9,9 +9,11 @@
   <div class="menu">
     @for (btn of arrBtn; track btn;) {
     <app-menu-button
-      [btnName]="btn.btnName"
-      (click)="onMenuBtnClick(btn.sectionId)"
-    ></app-menu-button>
+      [btnName]="btn.btnName | translate"
+      [sectionId]="btn.sectionId"
+    >
+      (click)="onMenuBtnClick(btn.sectionId)" ></app-menu-button
+    >
     }
   </div>
 </div>

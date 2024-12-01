@@ -1,19 +1,30 @@
 {
-  "SECTION_PORTFOLIO": {
-    "WELCOME": "Ich habe Erfahrung im Aufbau von Projekten mit unterschiedlichen Frontend - Technologien und Konzepten."
+  "SECTIONS": {
+    "section-about": "Über mich",
+    "section-skills": "Fähigkeiten",
+    "section-portfolio": "Portfolio",
+    "section-contact": "Kontakt"
   },
 
-  "PROJECT0": {
-    "FIRST": "Task Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, fügen Sie Benutzer und Kategorien hinzu."
-  },
-  "PROJECT1": {
-    "FIRST": "Ein einfaches Jump-and-Run-Spiel, das mit dem Konzept der Objektorientierung aufgebaut wurde. Hilf Pepe, Münzen und Flaschen zu finden, um gegen das verrückte Riesenhuhn zu kämpfen."
-  },
-  "LINKS": {
-    "CONTACT": "Kontakt"
+  "PORTFOLIO": {
+    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
   },
 
-  "now": "jetzt",
-  "Send message": "Nachricht senden",
-  "Lets talk": "Lass uns reden"
+  "PROJECTS": [
+    {
+      "projectName": "Join",
+      "description": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und Organisieren von Aufgaben mit Drag-and-Drop-Funktionen, Benutzer und Kategorien zuweisen.",
+      "alt": "Bild vom Projekt: Join."
+    },
+    {
+      "projectName": "El Pollo Loco",
+      "description": "Jump-and-Run-Spiel: Ein Spiel, das mit objektorientierter Programmierung entwickelt wurde. besiege Gegner auf dem weg zum Endboss und sammle dabei Gegenstände.",
+      "alt": "Bild vom Projekt: El Pollo Loco."
+    }
+  ],
+
+  "BUTTONS": {
+    "sentMessage": "Nachricht senden",
+    "letsTalk": "Lass uns reden"
+  }
 }

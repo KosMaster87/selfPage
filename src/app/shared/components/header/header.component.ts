@@ -1,5 +1,5 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ScrollService } from './../../services/scroll/scroll.service';
 import { HamburgerMenuBtnComponent } from './../../../future-modul/components/hamburger-menu-btn/hamburger-menu-btn.component';
 
@@ -15,6 +15,19 @@ import { HamburgerMenuBtnComponent } from './../../../future-modul/components/ha
 export class HeaderComponent {
   @Output() languageChanged = new EventEmitter<string>();
   currentLanguage: string = 'de';
+  isOnHomePage: boolean = false;
+
+  private scrollService = inject(ScrollService);
+  private router: Router = inject(Router);
+
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const basePath = event.urlAfterRedirects.split('#')[0].split('?')[0];
+        this.isOnHomePage = basePath === '/' || basePath === '/home';
+      }
+    });
+  }
 
   translateText(lang: string) {
     this.languageChanged.emit(lang);
@@ -24,12 +37,11 @@ export class HeaderComponent {
     this.currentLanguage = lang;
   }
 
-  private scrollService = inject(ScrollService);
-
-  navigateToHomeAndScroll(fragment: string): void {
-    this.scrollService.scrollToFragment(fragment, '/home');
+  scrollToFragment(fragment: string): void {
+    this.scrollService.scrollToFragment(fragment);
   }
-  // scrollToFragment(fragment: string): void {
-  //   this.scrollService.scrollToFragment(fragment);
-  // }
+
+  navigateToHome(): void {
+    this.router.navigate(['/home']);
+  }
 }

@@ -1,18 +1,30 @@
 {
-  "SECTION_PORTFOLIO": {
-    "WELCOME": "I have experience in building projects with different frontend technologies and concepts."
-  },
-  "PROJECT0": {
-    "FIRST": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
-  },
-  "PROJECT1": {
-    "FIRST": "A simple Jump and Run game based on an object-oriented approach. Help Pepe to find coins and bottles to fight against the crazy monster-chicken."
-  },
-  "LINKS": {
-    "CONTACT": "Contact"
+  "SECTIONS": {
+    "section-about": "About me",
+    "section-skills": "My skills",
+    "section-portfolio": "Portfolio",
+    "section-contact": "Contact"
   },
 
-  "now": "now",
-  "Send message": "Send message",
-  "Lets talk": "Lets talk"
+  "PORTFOLIO": {
+    "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
+  },
+
+  "PROJECTS": [
+    {
+      "projectName": "Join",
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "alt": "Image of project: Join."
+    },
+    {
+      "projectName": "El Pollo Loco",
+      "description": "Jump-and-Run game: A game developed using object-oriented programming. Defeat enemies on the way to the final boss and collect items along the way.",
+      "alt": "Image of project: El Pollo Loco."
+    }
+  ],
+
+  "BUTTONS": {
+    "sentMessage": "Send message",
+    "letsTalk": "Lets talk"
+  }
 }

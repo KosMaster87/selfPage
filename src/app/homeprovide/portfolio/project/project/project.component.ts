@@ -25,22 +25,19 @@ export class ProjectComponent implements AfterViewInit {
   public isVisible = false;
   private el: ElementRef = inject(ElementRef);
   private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
+
   data = inject(PortfolioDataService);
   projectsLength!: number;
   projects!: Project[];
 
   ngOnInit(): void {
-    this.projectsLength = this.data.myProjects.length;
-    this.projects = this.data.myProjects;
+    this.projectsLength = this.data.projects.length;
+    this.projects = this.data.projects;
   }
 
   oddOrEven(num: number): string {
     return num % 2 === 0 ? 'even' : 'odd';
   }
-
-  // openLink(url: string) {
-  //   window.open(url, '_blank');
-  // }
 
   openLink(url: string) {
     const link = document.createElement('a');

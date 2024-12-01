@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { SharedModule } from './../../../future-modul/shared.module';
-import { ScrollService } from '../../services/scroll/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -13,12 +12,9 @@ import { ScrollService } from '../../services/scroll/scroll.service';
   ],
 })
 export class FooterComponent {
-  private scrollService = inject(ScrollService);
+  private router: Router = inject(Router);
 
-  navigateToHomeAndScroll(fragment: string): void {
-    this.scrollService.scrollToFragment(fragment, '/home');
+  navigateToHome(): void {
+    this.router.navigate(['/home']);
   }
-  // scrollToFragment(fragment: string): void {
-  //   this.scrollService.scrollToFragment(fragment);
-  // }
 }

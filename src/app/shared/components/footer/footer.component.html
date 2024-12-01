@@ -5,24 +5,13 @@
         <a
           routerLink="/home"
           fragment="landingPage_firstSector"
-          (click)="navigateToHomeAndScroll('landingPage_firstSector')"
+          (click)="navigateToHome()"
           ><img class="pageLogo" src="assets/images/terminal_logo.svg"
         /></a>
         <span class="copyRight fontOverpass disableTextSelection"
           >© Konstantin Aksenov 2025</span
         >
       </div>
-      <!-- <div class="leftWrapper">
-        <a
-          routerLink="/home"
-          fragment="landingPage_firstSector"
-          (click)="scrollToFragment('landingPage_firstSector')"
-          ><img class="pageLogo" src="assets/images/terminal_logo.svg"
-        /></a>
-        <span class="copyRight fontOverpass disableTextSelection"
-          >© Konstantin Aksenov 2025</span
-        >
-      </div> -->
 
       <div class="rightWrapper">
         <div class="socialIcons fontOverpass disableTextSelection">
@@ -90,15 +79,9 @@
         <a
           routerLink="/home"
           fragment="landingPage_firstSector"
-          (click)="navigateToHomeAndScroll('landingPage_firstSector')"
+          (click)="navigateToHome()"
           ><img class="pageLogo" src="assets/images/terminal_logo.svg"
         /></a>
-        <!-- <a
-          routerLink="/home"
-          fragment="landingPage_firstSector"
-          (click)="scrollToFragment('landingPage_firstSector')"
-          ><img class="pageLogo" src="assets/images/terminal_logo.svg"
-        /></a> -->
       </div>
 
       <div class="rightWrapper">
@@ -106,7 +89,10 @@
           >Konstantin.Aksenov&#64;dev2k.org</span
         >
         <span class="legal fontOverpass disableTextSelection"
-          ><a class="imprintHover" routerLink="/imprint" fragment="imprint_component"
+          ><a
+            class="imprintHover"
+            routerLink="/imprint"
+            fragment="imprint_component"
             >Privacy Policy & Legal Notice</a
           ></span
         >

@@ -31,14 +31,14 @@
         <div class="infoBox" id="infoBox" [class.active]="isVisible">
           <div class="innerBox">
             <h2 class="fontSyne disableTextSelection" appHighlighting>
-              {{ project.projectName }}
+              {{ project.description | translate }}
             </h2>
             <h3 class="fontOverpass disableTextSelection">
               {{ project.headline }}
             </h3>
   
             <p class="disableTextSelection projectText fontOverpass">
-              {{ "PROJECT0.FIRST" | translate }}
+              {{ project.description | translate }}
             </p>
   
             <div class="fontOverpass disableTextSelection btnBox">

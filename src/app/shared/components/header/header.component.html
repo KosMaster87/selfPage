@@ -5,18 +5,10 @@
         <a
           routerLink="/home"
           fragment="landingPage_firstSector"
-          (click)="navigateToHomeAndScroll('landingPage_firstSector')"
+          (click)="navigateToHome()"
           ><img class="pageLogo" src="assets/images/terminal_logo.svg" /></a
         ><span class="fontSyne disableTextSelection pageSelfSlogen">dev2k</span>
       </div>
-      <!-- <div class="navLeft">
-        <a
-          routerLink="/home"
-          fragment="landingPage_firstSector"
-          (click)="scrollToFragment('landingPage_firstSector')"
-          ><img class="pageLogo" src="assets/images/terminal_logo.svg" /></a
-        ><span class="fontSyne disableTextSelection pageSelfSlogen">dev2k</span>
-      </div> -->
 
       <div class="navRight" style="display: flex">
         <nav class="navBarSelf">
@@ -45,9 +37,11 @@
           </div>
         </nav>
 
+        @if (isOnHomePage) {
         <div class="menuWrapper">
           <app-hamburger-menu-btn></app-hamburger-menu-btn>
         </div>
+        }
       </div>
     </div>
   </div>

@@ -1,29 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../../../models/project/project';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class PortfolioDataService {
-  myProjects: Project[] = [
+  projects: Project[] = [
     {
+      projectName: '',
+      description: '',
+      alt: '',
       img: 'assets/images/projects/Join.avif',
-      alt: 'Image of project: Join.',
       linkToPage: 'https://join.dev2k.org/',
       linkToGit: 'https://github.com/KosMaster87/Join.git',
-      projectName: 'Join',
-      headline: 'Javascript | Firebase | CSS | HTML',
-      description: '',
+      headline: 'Javascript | CSS | HTML',
     },
     {
+      projectName: '',
+      description: '',
+      alt: '',
       img: 'assets/images/projects/Loco.avif',
-      alt: 'Image of project: El pollo loco.',
       linkToPage: 'https://el-pollo-loco.dev2k.org/',
       linkToGit: 'https://github.com/KosMaster87/El-pollo-loco.git',
-      projectName: 'El Pollo Loco',
       headline: 'Javascript | CSS | HTML',
-      description: '',
     },
   ];
 
