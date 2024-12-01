@@ -10,17 +10,27 @@ import { MenuButtonComponent } from './../menu-button/menu-button/menu-button.co
 })
 export class HamburgerMenuBtnComponent {
   arrBtn: any = [
-    {
-      btnName: 'About me',
-    },
-    {
-      btnName: 'My skills',
-    },
-    {
-      btnName: 'Portfolio',
-    },
-    {
-      btnName: 'Contact',
-    },
+    { btnName: 'About me', sectionId: 'aboutH1' },
+    { btnName: 'My skills', sectionId: 'skills_Component' },
+    { btnName: 'Portfolio', sectionId: 'portfolio_Component' },
+    { btnName: 'Contact', sectionId: 'linearGradient' },
   ];
+
+  onMenuBtnClick(sectionId: string) {
+    const menuInput = document.getElementById('menuInput') as HTMLInputElement;
+
+    setTimeout(() => {
+      if (menuInput) {
+        menuInput.checked = false;
+      }
+
+      const body = document.body;
+      body.classList.remove('no-scroll');
+
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 500);
+  }
 }

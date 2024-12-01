@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -11,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
   template: `
     <div class="btnFlexBox">
       <button
-        *ngIf="buttonType !== 'submit'"
+        buttonType="button"
         class="btnSelf fontOverpass disableTextSelection"
         [attr.type]="buttonType"
         [ngClass]="buttonClass"
@@ -24,19 +24,6 @@ import { TranslateModule } from '@ngx-translate/core';
         {{ buttonTextRowTWO | translate }}
       </button>
     </div>
-
-    <button
-      *ngIf="buttonType === 'submit'"
-      class="btnSelf fontOverpass disableTextSelection"
-      [attr.type]="buttonType"
-      [ngClass]="buttonClass"
-      [disabled]="disabled"
-      [routerLink]="routerLink"
-      [fragment]="fragment"
-    >
-      {{ buttonTextRowOne | translate }} <br />
-      {{ buttonTextRowTWO | translate }}
-    </button>
   `,
   styleUrls: [
     './call-action-button.component.scss', // Basic style and responsive.
@@ -71,20 +58,4 @@ export class CallActionButtonComponent {
       }
     }
   }
-
-  /**
-   * Debugging
-   */
-  // scrollToFragment(): void {
-  //   if (this.fragment) {
-  //     const element = document.querySelector(`#${this.fragment}`);
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: 'smooth' });
-  //     } else {
-  //       console.warn(`Fragment mit ID "${this.fragment}" nicht gefunden.`);
-  //     }
-  //   } else {
-  //     console.warn('Kein Fragment definiert.');
-  //   }
-  // }
 }

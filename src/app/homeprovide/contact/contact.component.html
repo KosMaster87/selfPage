@@ -217,14 +217,12 @@
           }
         </div>
 
-        <app-call-action-button
-          [ngClass]="eigeneKlasse"
+        <app-button-contact
           [buttonClass]="'contactButton'"
           [buttonTextRowOne]="'Send message'"
-          [buttonType]="'submit'"
           [disabled]="!contactForm.valid || !isChecked"
         >
-        </app-call-action-button>
+        </app-button-contact>
       </form>
     </div>
 

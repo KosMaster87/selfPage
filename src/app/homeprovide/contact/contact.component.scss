@@ -326,55 +326,6 @@ input {
   transform: scale(1.2);
 }
 
-// input[type="checkbox"] {
-//   appearance: none;
-//   -webkit-appearance: none;
-//   background-color: var(--primeColor-dark);
-//   border: 2px solid var(--primeColor-white);
-//   position: relative;
-//   border-radius: 4px;
-//   width: 20px;
-//   height: 20px;
-
-//   &:before {
-//     content: "";
-//     position: absolute;
-//     top: -0.37rem;
-//     left: -0.37rem;
-//     width: 1.75rem;
-//     height: 1.75rem;
-//     background-color: transparent;
-//     border-radius: 50%;
-//     transition: background-color 0.2s ease-in-out;
-//   }
-
-//   &:not(:checked):hover {
-//     background-color: var(--btn-contact-checkbox);
-//   }
-// }
-
-// input[type="checkbox"]:hover {
-//   background-color: var(--btn-contact-checkbox-hover);
-// }
-
-// input[type="checkbox"]:checked {
-//   background-color: var(--btn-contact-checkbox);
-//   color: var(--primeColor-white);
-
-//   &:after {
-//     content: "✔";
-//     position: absolute;
-//     top: 0;
-//     left: 0.1rem;
-//     font-size: 1rem;
-//     color: var(--primeColor-white);
-//   }
-
-//   &:before {
-//     background-color: var(--btn-contact-checkbox);
-//   }
-// }
-
 a {
   text-decoration: none;
   color: var(--btn-contact-checkbox);
@@ -465,7 +416,6 @@ app-call-action-button {
     );
   }
 }
-
 
 .bgRED {
   background-color: red;

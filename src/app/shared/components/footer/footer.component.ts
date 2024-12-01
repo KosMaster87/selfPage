@@ -15,7 +15,10 @@ import { ScrollService } from '../../services/scroll/scroll.service';
 export class FooterComponent {
   private scrollService = inject(ScrollService);
 
-  scrollToFragment(fragment: string): void {
-    this.scrollService.scrollToFragment(fragment);
+  navigateToHomeAndScroll(fragment: string): void {
+    this.scrollService.scrollToFragment(fragment, '/home');
   }
+  // scrollToFragment(fragment: string): void {
+  //   this.scrollService.scrollToFragment(fragment);
+  // }
 }

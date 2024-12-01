@@ -13,13 +13,11 @@
   top: 0;
   z-index: 20;
   transition: 0.5s;
-
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-
 }
 
 .menuInput {
@@ -27,7 +25,7 @@
 }
 
 .menuInput:checked ~ .menu {
-  transform: translateX(0rem);
+  transform: translateX(0);
 }
 
 .burger {

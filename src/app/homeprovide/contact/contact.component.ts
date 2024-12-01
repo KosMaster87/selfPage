@@ -43,19 +43,17 @@ export class ContactComponent {
     this.checkboxHovered = isHovered;
   }
 
-  eigeneKlasse: string = '';
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+  };
 
   // contactData = {
-  //   name: '',
-  //   email: '',
-  //   message: '',
+  //   name: 'Oroku Saki',
+  //   email: 'mySuperDupaFoundation@Shredder.de',
+  //   message: 'Some text; Any lorem ipsum.',
   // };
-
-  contactData = {
-    name: 'Oroku Saki',
-    email: 'mySuperDupaFoundation@Shredder.de',
-    message: 'Some text; Any lorem ipsum.',
-  };
 
   post = {
     endPoint: 'https://portfolio.dev2k.org/contact/sendMail.php',
