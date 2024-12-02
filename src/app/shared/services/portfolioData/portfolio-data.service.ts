@@ -7,8 +7,8 @@ import { Project } from '../../../models/project/project';
 export class PortfolioDataService {
   projects: Project[] = [
     {
-      projectName: '',
-      description: '',
+      projectName: 'some title',
+      description: 'some text',
       alt: '',
       img: 'assets/images/projects/Join.avif',
       linkToPage: 'https://join.dev2k.org/',
@@ -16,8 +16,8 @@ export class PortfolioDataService {
       headline: 'Javascript | CSS | HTML',
     },
     {
-      projectName: '',
-      description: '',
+      projectName: 'some titel',
+      description: 'some text',
       alt: '',
       img: 'assets/images/projects/Loco.avif',
       linkToPage: 'https://el-pollo-loco.dev2k.org/',
