@@ -25,10 +25,33 @@
     "loco-description": "Jump-and-Run game: A game developed using object-oriented programming. Defeat enemies on the way to the final boss and collect items along the way.",
     "loco-alt": "Image of project: El Pollo Loco."
   },
+  "CONTACT": {
+    "say": "Say hi!",
+    "title": "Want to discuss a new project?",
+    "expression": "Say hello! let's discuss your ideas and make it happen",
+    "yourName": "Your name",
+    "yourNameRequired": "Your name is required.",
+    "yourNameFull": "Please enter your full name.",
+    "yourEmail": "Your email",
+    "yourEmailRequired": "Your email is required.",
+    "yourEmailFull": "Please enter a valid email address.",
+    "yourMessage": "Your message",
+    "yourMessageRequired": "Your message is empty.",
+    "checkBox01": "I've read the",
+    "checkBox02": "privacy policy",
+    "checkBox03": "and agree to the processing of my data as outlined."
+  },
+  "FOOTER": {
+    "policy": "Privacy Policy & Legal Notice"
+  },
   "BUTTONS": {
     "sentMessage": "Send message",
     "letsTalk": "Lets talk",
     "scroll": "Scroll",
-    "down": "down"
+    "down": "down",
+    "switchBack": "Back to page"
+  },
+  "INPRINT": {
+    "x": "x"
   }
 }

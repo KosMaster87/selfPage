@@ -2,16 +2,16 @@
 <div class="ultraWide">
   <section id="contact_component">
     <h1 class="greeting fontSyne disableTextSelection" appHighlighting>
-      Say Hi!
+      {{ "CONTACT.say" | translate }}
     </h1>
 
     <div class="formParent">
       <div class="greetings">
         <h2 class="fontOverpass disableTextSelection">
-          Want to discuss a new project?
+          {{ "CONTACT.title" | translate }}
         </h2>
         <h3 class="fontOverpass disableTextSelection">
-          Say hello! let's discuss your ideas and make it happen
+          {{ "CONTACT.expression" | translate }}
         </h3>
       </div>
 
@@ -25,7 +25,7 @@
           <label
             class="inputLabel_name fontOverpass disableTextSelection"
             for="input_name"
-            >Your name</label
+            >{{ "CONTACT.yourName" | translate }}</label
           >
 
           <input
@@ -58,14 +58,14 @@
             class="errorText fontOverpass disableTextSelection"
             *ngIf="name.errors?.['required']"
           >
-            Your name is required.
+            {{ "CONTACT.yourNameRequired" | translate }}
           </small>
 
           <small
             class="errorText fontOverpass disableTextSelection"
             *ngIf="name.errors?.['pattern']"
           >
-            Please enter your full name.
+            {{ "CONTACT.yourNameFull" | translate }}
           </small>
           }
         </div>
@@ -79,7 +79,7 @@
           <label
             class="inputLabel_email fontOverpass disableTextSelection"
             for="input_email"
-            >Your email</label
+            >{{ "CONTACT.yourEmail" | translate }}</label
           >
           <input
             class="input_email fontOverpass disableTextSelection"
@@ -111,14 +111,14 @@
             class="errorText fontOverpass disableTextSelection"
             *ngIf="email.errors?.['required']"
           >
-            Your email is required.
+            {{ "CONTACT.yourEmailRequired" | translate }}
           </small>
 
           <small
             class="errorText fontOverpass disableTextSelection"
             *ngIf="email.errors?.['pattern']"
           >
-            Please enter a valid email address.
+            {{ "CONTACT.yourEmailFull" | translate }}
           </small>
 
           }
@@ -133,7 +133,7 @@
           <label
             class="inputLabel_message fontOverpass disableTextSelection"
             for="textarea_message"
-            >Your message</label
+            >{{ "CONTACT.yourMessage" | translate }}</label
           >
           <textarea
             class="textarea_message textarea fontOverpass disableTextSelection"
@@ -161,7 +161,7 @@
 
           @if (message.invalid && message.touched) {
           <small class="errorText fontOverpass disableTextSelection">
-            Your message is empty. </small
+            {{ "CONTACT.yourMessageRequired" | translate }} </small
           >}
         </div>
 
@@ -201,11 +201,11 @@
               class="checkboxLabel fontOverpass disableTextSelection"
               for="checkboxSelf"
               ><small
-                >I've read the
-                <a class="checkboxPolicy" routerLink="/imprint"
-                  >privacy policy</a
-                >
-                and agree to the processing of my data as outlined.</small
+                >{{ "CONTACT.checkBox01" | translate }}
+                <a class="checkboxPolicy" routerLink="/imprint">{{
+                  "CONTACT.checkBox02" | translate
+                }}</a>
+                {{ "CONTACT.checkBox03" | translate }}</small
               ></label
             >
           </div>
