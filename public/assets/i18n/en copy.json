@@ -2,29 +2,35 @@
   "DEVELOPER": {
     "developer": "Developer"
   },
+
   "SECTIONS": {
     "about": "About me",
     "skills": "My skills",
     "portfolio": "Portfolio",
     "contact": "Contact"
   },
+
   "ABOUT": {
     "talk-01": "Hello, I am a German-speaking frontend developer living in Loma Plata, Paraguay. Driven by the endless possibilities in the IT world, I am passionate about creating visually appealing and user-friendly websites and applications.",
     "talk-02": "I can work effectively remote from Paraguay and have the advantage of being available for work in the German-speaking region even during late night hours, thanks to the different time zones."
   },
   "PORTFOLIO": {
-    "title": "Portfolio",
     "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
   },
-  "PROJECTS": {
-    "join-projectName": "Join",
-    "join-description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-    "join-alt": "Image of project: Join.",
 
-    "loco-projectName": "El Pollo Loco",
-    "loco-description": "Jump-and-Run game: A game developed using object-oriented programming. Defeat enemies on the way to the final boss and collect items along the way.",
-    "loco-alt": "Image of project: El Pollo Loco."
-  },
+  "PROJECTS": [
+    {
+      "projectName": "Join",
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "alt": "Image of project: Join."
+    },
+    {
+      "projectName": "El Pollo Loco",
+      "description": "Jump-and-Run game: A game developed using object-oriented programming. Defeat enemies on the way to the final boss and collect items along the way.",
+      "alt": "Image of project: El Pollo Loco."
+    }
+  ],
+
   "BUTTONS": {
     "sentMessage": "Send message",
     "letsTalk": "Lets talk",

@@ -11,12 +11,11 @@ import { HamburgerMenuService } from '../../../shared/services/HamburgerMenu/ham
   styleUrl: './hamburger-menu-btn.component.scss',
 })
 export class HamburgerMenuBtnComponent {
+  arrBtn: any = [];
   private hamburgerMenuService: HamburgerMenuService =
     inject(HamburgerMenuService);
-  arrBtn: any = [];
 
   ngOnInit(): void {
-    // Hole die Buttons vom Service
     this.arrBtn = this.hamburgerMenuService.getButtons();
   }
 

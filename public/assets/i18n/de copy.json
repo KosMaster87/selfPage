@@ -2,29 +2,36 @@
   "DEVELOPER": {
     "developer": "Entwickler"
   },
+
   "SECTIONS": {
     "about": "Über mich",
     "skills": "Fähigkeiten",
     "portfolio": "Portfolio",
     "contact": "Kontakt"
   },
+
   "ABOUT": {
     "talk-01": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler, der in Loma Plata, Paraguay, lebt. Getrieben von den unendlichen Möglichkeiten in der IT-Welt bin ich leidenschaftlich daran interessiert, optisch ansprechende und benutzerfreundliche Webseiten und Anwendungen zu erstellen.",
     "talk-02": "Ich kann effektiv aus Paraguay remote arbeiten und habe den Vorteil, dank der Zeitverschiebung auch während der späten Nachtstunden für Arbeiten im deutschsprachigen Raum verfügbar zu sein."
   },
+  
   "PORTFOLIO": {
-    "title": "Portfolio",
     "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
   },
-  "PROJECTS": {
-    "join-projectName": "Join",
-    "join-description": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und Organisieren von Aufgaben mit Drag-and-Drop-Funktionen, Benutzer und Kategorien zuweisen.",
-    "join-alt": "Bild vom Projekt: Join.",
 
-    "loco-projectName": "El Pollo Loco",
-    "loco-description": "Jump-and-Run-Spiel: Ein Spiel, das mit objektorientierter Programmierung entwickelt wurde. besiege Gegner auf dem weg zum Endboss und sammle dabei Gegenstände.",
-    "loco-alt": "Bild vom Projekt: El Pollo Loco."
-  },
+  "PROJECTS": [
+    {
+      "projectName": "Join",
+      "description": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und Organisieren von Aufgaben mit Drag-and-Drop-Funktionen, Benutzer und Kategorien zuweisen.",
+      "alt": "Bild vom Projekt: Join."
+    },
+    {
+      "projectName": "El Pollo Loco",
+      "description": "Jump-and-Run-Spiel: Ein Spiel, das mit objektorientierter Programmierung entwickelt wurde. besiege Gegner auf dem weg zum Endboss und sammle dabei Gegenstände.",
+      "alt": "Bild vom Projekt: El Pollo Loco."
+    }
+  ],
+
   "BUTTONS": {
     "sentMessage": "Nachricht senden",
     "letsTalk": "Lass uns reden",

@@ -7,18 +7,18 @@ import { Project } from '../../../models/project/project';
 export class PortfolioDataService {
   projects: Project[] = [
     {
-      projectName: 'some title',
-      description: 'some text',
-      alt: '',
+      projectName: 'join',
+      description: 'German text',
+      alt: 'Alternative Bildbezeichnung',
       img: 'assets/images/projects/Join.avif',
       linkToPage: 'https://join.dev2k.org/',
       linkToGit: 'https://github.com/KosMaster87/Join.git',
       headline: 'Javascript | CSS | HTML',
     },
     {
-      projectName: 'some titel',
-      description: 'some text',
-      alt: '',
+      projectName: 'loco',
+      description: 'English text',
+      alt: 'Alternative image designation',
       img: 'assets/images/projects/Loco.avif',
       linkToPage: 'https://el-pollo-loco.dev2k.org/',
       linkToGit: 'https://github.com/KosMaster87/El-pollo-loco.git',

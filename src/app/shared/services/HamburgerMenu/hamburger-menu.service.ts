@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class HamburgerMenuService {
   arrBtn: any = [
-    { btnName: 'SECTIONS.section-about', sectionId: 'aboutH1' },
-    { btnName: 'SECTIONS.section-skills', sectionId: 'skills_Component' },
-    { btnName: 'SECTIONS.section-portfolio', sectionId: 'portfolio_Component' },
-    { btnName: 'SECTIONS.section-contact', sectionId: 'linearGradient' },
+    { btnName: 'SECTIONS.about', sectionId: 'aboutH1' },
+    { btnName: 'SECTIONS.skills', sectionId: 'skills_Component' },
+    { btnName: 'SECTIONS.portfolio', sectionId: 'portfolio_Component' },
+    { btnName: 'SECTIONS.contact', sectionId: 'linearGradient' },
   ];
 
   getButtons() {
