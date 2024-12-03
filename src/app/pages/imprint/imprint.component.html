@@ -10,7 +10,9 @@
 
         <div>
           <h3>Kontakt</h3>
-          <p>E-Mail: Konstantin.Aksenov&#64;dev2k.org</p>
+          <p class="businessCardEmail">
+            E-Mail: Konstantin.Aksenov&#64;dev2k.org
+          </p>
         </div>
       </div>
 
@@ -20,12 +22,6 @@
         routerLink="/home"
       >
       </app-call-action-button>
-      <!-- <app-call-action-button
-        [buttonClass]="'routerHome'"
-        [buttonTextRowOne]="'Switch back'"
-        routerLink="/home"
-      >
-      </app-call-action-button> -->
     </div>
 
     <div class="privacyLegalWrapper">
@@ -530,19 +526,22 @@
             Unternehmensgröße und Beschäftigungsstatus. Datenschutzinformationen
             zur Verarbeitung von Nutzerdaten durch LinkedIn können den
             Datenschutzhinweisen von LinkedIn entnommen werden:
+            <br />
             <a
               href="https://www.linkedin.com/legal/privacy-policy"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              >https://www.linkedin.com/legal/privacy-policy.</a
+              >linkedin privacy-policy</a
             ><br />Wir haben mit LinkedIn Irland eine spezielle Vereinbarung
-            geschlossen („Page Insights Joint Controller Addendum",
+            geschlossen („Page Insights Joint Controller Addendum",<br />
+
             <a
               href="https://legal.linkedin.com/pages-joint-controller-addendum"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              >https://legal.linkedin.com/pages-joint-controller-addendum</a
-            >), in der insbesondere geregelt wird, welche Sicherheitsmaßnahmen
+              >linkedin joint-controller-addendum</a
+            >),<br />
+            in der insbesondere geregelt wird, welche Sicherheitsmaßnahmen
             LinkedIn beachten muss und in der LinkedIn sich bereit erklärt hat,
             die Rechte der Betroffenen zu erfüllen (d. h. Nutzer können z. B.
             Auskunfts- oder Löschungsanfragen direkt an LinkedIn richten). Die
@@ -560,45 +559,41 @@
             <span class=""
               ><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6
               Abs. 1 S. 1 lit. f) DSGVO); </span
-            ><strong>Website:</strong>
+            ><strong>Website:</strong><br />
             <a
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer nofollow"
               >https://www.linkedin.com</a
-            >; <strong>Datenschutzerklärung:</strong>
+            >; <strong>Datenschutzerklärung:</strong><br />
             <a
               href="https://www.linkedin.com/legal/privacy-policy"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              >https://www.linkedin.com/legal/privacy-policy</a
-            >. <strong>Widerspruchsmöglichkeit (Opt-Out):</strong>
+              >linkedin privacy-policy</a
+            >. <strong>Widerspruchsmöglichkeit (Opt-Out):</strong><br />
             <a
               href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              >https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a
+              >linkedin retargeting-opt-out</a
             >.
           </li>
         </ul>
+        <br />
+
         <p class="seal">
           <a
             href="https://datenschutz-generator.de/"
             title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
             target="_blank"
             rel="noopener noreferrer nofollow"
-            >Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
-            Schwenke</a
+            >Erstellt mit kostenlosem <br />Datenschutz-Generator.de
+            <br />
+            von Dr. Thomas Schwenke</a
           >
         </p>
       </div>
-
-      <!-- <h2>
-        <a [routerLink]="['/zeug', meinZeugID]" routerLinkActive="" [routerLinkActive]="[meinAktiveKlasse, 'active']" >Zeug</a>
-      </h2> -->
-      <!-- [routerLink]="['/zeug', meinZeugID]" dient um pfade und ordner auf die angegebene route zu leiten.  -->
-      <!-- meinAktiveKlasse in der componente als variable nutzen. -->
-      <!-- routerLinkActive="" um CSS-Klassen dynamisch hinzuzufügen, wenn der zugehörige Router-Link aktiv ist -->
     </div>
   </section>
 </div>

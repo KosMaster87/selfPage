@@ -306,6 +306,10 @@ input {
   color: var(--primeColor-white);
 }
 
+.checkboxText {
+  max-width: 50ch;
+  }
+
 .checkboxHidden {
   display: none;
 }
@@ -383,6 +387,11 @@ app-call-action-button {
     font-size: 0.7rem;
     padding: 0.5rem;
   }
+
+  .checkboxText {
+    font-size: 0.7rem;
+    max-width: 50ch;
+    }
 }
 
 @media screen and (max-width: 720px) and (orientation: portrait) {
